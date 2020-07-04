@@ -6,32 +6,46 @@ import 'package:flutter_vant_kit/widgets/price.dart';
 class SubmitBar extends StatelessWidget {
   /// Price
   final double price;
+
   /// Price left copy
   final String label;
+
   /// Copy right
   final String suffixLabel;
+
   /// Price copy alignment
   final String textAlign;
+
   /// Button text
   final String buttonText;
+
   /// Cue copy
   final String tip;
+
   /// Left icon
   final IconData tipIcon;
+
   /// Whether to disable the button
   final bool disabled;
+
   /// Is loading
   final bool loading;
+
   /// currency symbol
   final String currency;
+
   /// Price decimal place
   final int decimalLength;
+
   /// Button click event callback
   final Function() onSubmit;
+
   /// Tips for additional operations and instructions in copy
   final Widget customTip;
+
   /// Customize the content above the order bar
   final Widget customTop;
+
   /// Customize the left side of the order bar
   final Widget customLeft;
 
