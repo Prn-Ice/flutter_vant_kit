@@ -20,43 +20,43 @@ class _DemoDivider extends State<DemoDivider> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          title("基础用法"),
+          title("Basic usage"),
           NDivider(),
-          title("展示文本"),
+          title("Display text"),
           NDivider(
-            content: "分割线",
+            content: "split line",
           ),
-          title("内容位置"),
+          title("Content location"),
           NDivider(
-            content: "分割线",
+            content: "split line",
             contentPosition: 'left',
           ),
           SizedBox(height: 10),
           NDivider(
-            content: "分割线",
+            content: "split line",
             contentPosition: 'right',
           ),
-          title("细分割线"),
+          title("Fine dividing line"),
           NDivider(
-            content: "分割线",
+            content: "split line",
             hairline: true,
           ),
-          title("自定义颜色"),
+          title("Custom colors"),
           NDivider(
               lineColor: Colors.redAccent,
               fontColor: Colors.redAccent,
-              content: "没有更多了"),
+              content: "No more"),
           SizedBox(height: 10),
           NDivider(
               lineColor: Colors.orangeAccent,
               fontColor: Colors.orangeAccent,
-              content: "没有更多了"),
+              content: "No more"),
           SizedBox(height: 10),
           NDivider(
               lineColor: Colors.blueAccent,
               fontColor: Colors.blueAccent,
-              content: "没有更多了"),
-          title("自定义内容"),
+              content: "No more"),
+          title("Custom content"),
           NDivider(child: Icon(Icons.cancel, color: Colors.blueAccent)),
           SizedBox(
             height: 20,

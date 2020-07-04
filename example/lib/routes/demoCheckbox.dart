@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../utils/index.dart';
 import 'package:flutter_vant_kit/main.dart';
+
+import '../utils/index.dart';
 
 class DemoCheckbox extends StatefulWidget {
   @override
@@ -9,21 +10,21 @@ class DemoCheckbox extends StatefulWidget {
 
 class _DemoCheckbox extends State<DemoCheckbox> {
   List<CheckItem> list = [
-    CheckItem(name: "a", text: "复选框a"),
-    CheckItem(name: "b", text: "复选框b"),
+    CheckItem(name: "a", text: "Check box a"),
+    CheckItem(name: "b", text: "Check box b"),
   ];
 
   List<CheckItem> list2 = [
-    CheckItem(name: "a", text: "复选框a"),
-    CheckItem(name: "b", text: "复选框b"),
-    CheckItem(name: "c", text: "复选框c", checkedColor: Colors.green),
-    CheckItem(name: "d", text: "复选框d", disabled: true),
+    CheckItem(name: "a", text: "Check box a"),
+    CheckItem(name: "b", text: "Check box b"),
+    CheckItem(name: "c", text: "Checkbox c", checkedColor: Colors.green),
+    CheckItem(name: "d", text: "Check box d", disabled: true),
   ];
 
   List<CheckItem> list3 = [
-    CheckItem(name: "a", text: "复选框a"),
-    CheckItem(name: "b", text: "复选框b"),
-    CheckItem(name: "c", text: "复选框c"),
+    CheckItem(name: "a", text: "Check box a"),
+    CheckItem(name: "b", text: "Check box b"),
+    CheckItem(name: "c", text: "Checkbox c"),
   ];
 
   Widget title(String title) {
@@ -39,7 +40,7 @@ class _DemoCheckbox extends State<DemoCheckbox> {
         child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        title("基础用法"),
+        title("Basic usage"),
         CheckboxGroup(
           list: list,
           values: ["a"],
@@ -47,36 +48,36 @@ class _DemoCheckbox extends State<DemoCheckbox> {
             Utils.toast(list.toString());
           },
         ),
-        title("禁用状态"),
+        title("Disabled"),
         CheckboxGroup(
           list: list,
           values: ["a"],
           disabled: true,
         ),
-        title("自定义形状"),
+        title("Custom shape"),
         CheckboxGroup(
           list: list,
           values: ["a"],
           shape: "square",
         ),
-        title("自定义颜色"),
+        title("Custom colors"),
         CheckboxGroup(
           list: list,
           values: ["a"],
           checkedColor: Colors.green,
         ),
-        title("复选框组"),
+        title("Check box group"),
         CheckboxGroup(
           list: list2,
           values: ["a", "b"],
         ),
-        title("设置最大可选数"),
+        title("Set the maximum selectable number"),
         CheckboxGroup(
           list: list3,
           values: ["a"],
           max: 2,
         ),
-        title("单元格组件"),
+        title("Cell component"),
         CheckboxGroup(
           list: list3,
           values: ['a'],

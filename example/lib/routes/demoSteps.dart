@@ -22,7 +22,7 @@ class _DemoSteps extends State<DemoSteps> {
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-          title("基础用法"),
+          title("Basic usage"),
           Steps(steps: [
             StepItem("买家下单"),
             StepItem("商家接单"),
@@ -59,7 +59,7 @@ class _DemoSteps extends State<DemoSteps> {
                   ),
                 ],
               )),
-          title("自定义样式"),
+          title("Custom style"),
           Steps(
             steps: [
               StepItem("买家下单"),

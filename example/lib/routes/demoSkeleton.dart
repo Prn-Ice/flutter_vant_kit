@@ -23,7 +23,7 @@ class _DemoSkeleton extends State<DemoSkeleton> {
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-          title("基础用法"),
+          title("Basic usage"),
           Skeleton(
             row: 3,
             title: true,

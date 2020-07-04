@@ -1,8 +1,7 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import './routes/index.dart';
 import 'package:flutter_vant_kit/main.dart';
+
+import './routes/index.dart';
 
 void main() async {
   runApp(MyApp());
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter 组件库',
+      title: 'Flutter Component library',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -38,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text("Flutter 组件库"),
+        title: Text("Flutter Component library"),
         centerTitle: true,
       ),
       body: Container(
@@ -48,132 +47,126 @@ class _MyHomePageState extends State<MyHomePage> {
             name: ["0"],
             list: [
               CollapseItem(
-                customTitle:
-                    Text("基础组件", style: TextStyle(fontWeight: FontWeight.bold)),
+                customTitle: Text("Basic components",
+                    style: TextStyle(fontWeight: FontWeight.bold)),
                 isExpanded: true,
                 child: CellGroup(
                   border: false,
                   children: <Widget>[
-                    PageCell("Button 按钮", (ctx) => DemoButton(),
+                    PageCell("Button push button", (ctx) => DemoButton(),
                         padding: false),
-                    PageCell("Cell 单元格", (ctx) => DemoCell(), padding: false),
-                    PageCell("Image 图片", (ctx) => DemoImage(), padding: true),
-                    PageCell("Avatar 头像", (ctx) => DemoAvatar(), padding: true),
+                    PageCell("Cell Cell", (ctx) => DemoCell(), padding: false),
+                    PageCell("Image picture", (ctx) => DemoImage(),
+                        padding: true),
+                    PageCell("Avatar head portrait", (ctx) => DemoAvatar(),
+                        padding: true),
                   ],
                 ),
               ),
               CollapseItem(
-                customTitle:
-                    Text("表单组件", style: TextStyle(fontWeight: FontWeight.bold)),
+                customTitle: Text("Form component",
+                    style: TextStyle(fontWeight: FontWeight.bold)),
                 isExpanded: true,
                 child: CellGroup(
                   border: false,
                   children: <Widget>[
-                    PageCell("Calendar 日历", (ctx) => DemoCalendar(),
+                    PageCell("Calendar", (ctx) => DemoCalendar(),
                         padding: false),
-                    PageCell("Checkbox 复选框", (ctx) => DemoCheckbox(),
+                    PageCell("Checkbox", (ctx) => DemoCheckbox(),
                         padding: true),
-                    PageCell("Field 输入框", (ctx) => DemoField(), padding: false),
+                    PageCell("Field", (ctx) => DemoField(), padding: false),
+                    PageCell("NumberKeyboard", (ctx) => DemoNumberKeyboard(),
+                        padding: true),
+                    PageCell("PasswordInput", (ctx) => DemoPasswordInput(),
+                        padding: true),
+                    PageCell("Picker", (ctx) => DemoPicker(), padding: false),
+                    PageCell("Radio", (ctx) => DemoRadio(), padding: true),
+                    PageCell("Rate", (ctx) => DemoRate(), padding: false),
+                    PageCell("Search", (ctx) => DemoSearch(), padding: false),
+                    PageCell("Stepper", (ctx) => DemoStepper(), padding: false),
+                    PageCell("ImageWall", (ctx) => DemoImageWall(),
+                        padding: false),
+                  ],
+                ),
+              ),
+              CollapseItem(
+                customTitle: Text("Feedback component",
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+                isExpanded: true,
+                child: CellGroup(
+                  border: false,
+                  children: <Widget>[
                     PageCell(
-                        "NumberKeyboard 数字键盘", (ctx) => DemoNumberKeyboard(),
+                        "ActionSheet Pull-up menu", (ctx) => DemoActionSheet(),
                         padding: true),
-                    PageCell(
-                        "PasswordInput 密码输入框", (ctx) => DemoPasswordInput(),
+                    PageCell("Dialog Pop-ups", (ctx) => DemoDialog(),
                         padding: true),
-                    PageCell("Picker 选择器", (ctx) => DemoPicker(),
-                        padding: false),
-                    PageCell("Radio 单选框", (ctx) => DemoRadio(), padding: true),
-                    PageCell("Rate 评分", (ctx) => DemoRate(), padding: false),
-                    PageCell("Search 搜索", (ctx) => DemoSearch(),
-                        padding: false),
-                    PageCell("Stepper 步进器", (ctx) => DemoStepper(),
-                        padding: false),
-                    PageCell("ImageWall 图片选择器", (ctx) => DemoImageWall(),
-                        padding: false),
+                    PageCell("Loading", (ctx) => DemoLoading(), padding: true),
                   ],
                 ),
               ),
               CollapseItem(
-                customTitle:
-                    Text("反馈组件", style: TextStyle(fontWeight: FontWeight.bold)),
+                customTitle: Text("Display components",
+                    style: TextStyle(fontWeight: FontWeight.bold)),
                 isExpanded: true,
                 child: CellGroup(
                   border: false,
                   children: <Widget>[
-                    PageCell("ActionSheet 上拉菜单", (ctx) => DemoActionSheet(),
-                        padding: true),
-                    PageCell("Dialog 弹窗", (ctx) => DemoDialog(), padding: true),
-                    PageCell("Loading 加载", (ctx) => DemoLoading(),
-                        padding: true),
-                  ],
-                ),
-              ),
-              CollapseItem(
-                customTitle:
-                    Text("展示组件", style: TextStyle(fontWeight: FontWeight.bold)),
-                isExpanded: true,
-                child: CellGroup(
-                  border: false,
-                  children: <Widget>[
-                    PageCell("Badge 徽标", (ctx) => DemoBadge(), padding: true),
-                    PageCell("Circle 环形进度条", (ctx) => DemoCircle(),
-                        padding: true),
-                    PageCell("Collapse 折叠面板", (ctx) => DemoCollapse(),
+                    PageCell("Badge", (ctx) => DemoBadge(), padding: true),
+                    PageCell("Circle", (ctx) => DemoCircle(), padding: true),
+                    PageCell("Collapse", (ctx) => DemoCollapse(),
                         padding: false),
                     // PageCell("CountDown 倒计时", (ctx) => DemoCountDown(), padding: false),
-                    PageCell("Divider 分割线", (ctx) => DemoDivider(),
+                    PageCell("Divider", (ctx) => DemoDivider(), padding: true),
+                    PageCell("ImagePreview", (ctx) => DemoImagePreview(),
                         padding: true),
-                    PageCell("ImagePreview 图片预览", (ctx) => DemoImagePreview(),
-                        padding: true),
-                    PageCell("List 列表", (ctx) => DemoList(),
+                    PageCell("List", (ctx) => DemoList(),
                         padding: false, withScaffold: false),
-                    PageCell("NoticeBar 通知栏", (ctx) => DemoNoticeBar(),
+                    PageCell("NoticeBar", (ctx) => DemoNoticeBar(),
                         padding: false),
-                    PageCell("Panel 面板", (ctx) => DemoPanel(), padding: false),
-                    PageCell("Price 商品价格", (ctx) => DemoPrice(), padding: true),
-                    PageCell("Progress 进度条", (ctx) => DemoProgress(),
+                    PageCell("Panel", (ctx) => DemoPanel(), padding: false),
+                    PageCell("Price", (ctx) => DemoPrice(), padding: true),
+                    PageCell("Progress", (ctx) => DemoProgress(),
                         padding: true),
-                    PageCell("Skeleton 骨架屏", (ctx) => DemoSkeleton(),
+                    PageCell("Skeleton", (ctx) => DemoSkeleton(),
                         padding: true),
-                    PageCell("Steps 步骤条", (ctx) => DemoSteps(), padding: false),
-                    PageCell("Swipe 轮播", (ctx) => DemoSwipe(), padding: false),
-                    PageCell("Tag 标签", (ctx) => DemoTag(), padding: true),
+                    PageCell("Steps", (ctx) => DemoSteps(), padding: false),
+                    PageCell("Swipe", (ctx) => DemoSwipe(), padding: false),
+                    PageCell("Tag", (ctx) => DemoTag(), padding: true),
                   ],
                 ),
               ),
               CollapseItem(
-                customTitle:
-                    Text("导航组件", style: TextStyle(fontWeight: FontWeight.bold)),
+                customTitle: Text("Navigation component",
+                    style: TextStyle(fontWeight: FontWeight.bold)),
                 isExpanded: true,
                 child: CellGroup(
                   border: false,
                   children: <Widget>[
-                    PageCell("Pagination 分页", (ctx) => DemoPagination(),
+                    PageCell("Pagination", (ctx) => DemoPagination(),
                         padding: true),
-                    PageCell("Sidebar 侧边导航", (ctx) => DemoSidebar(),
-                        padding: true),
-                    PageCell("TreeSelect 分类选择", (ctx) => DemoTreeSelect(),
+                    PageCell("Sidebar", (ctx) => DemoSidebar(), padding: true),
+                    PageCell("TreeSelect", (ctx) => DemoTreeSelect(),
                         padding: false),
                   ],
                 ),
               ),
               CollapseItem(
-                customTitle:
-                    Text("业务组件", style: TextStyle(fontWeight: FontWeight.bold)),
+                customTitle: Text("Business components",
+                    style: TextStyle(fontWeight: FontWeight.bold)),
                 isExpanded: true,
                 child: CellGroup(
                   border: false,
                   children: <Widget>[
-                    PageCell("AddressEdit 地址编辑", (ctx) => DemoAddressEdit(),
+                    PageCell("AddressEdit", (ctx) => DemoAddressEdit(),
                         padding: false),
-                    PageCell("AddressList 地址列表", (ctx) => DemoAddressList(),
+                    PageCell("AddressList", (ctx) => DemoAddressList(),
                         padding: false),
-                    PageCell("Card 商品卡片", (ctx) => DemoCard(), padding: false),
-                    PageCell("Coupon 优惠券选择器", (ctx) => DemoCoupon(),
+                    PageCell("Card", (ctx) => DemoCard(), padding: false),
+                    PageCell("Coupon", (ctx) => DemoCoupon(), padding: false),
+                    PageCell("GoodsAction", (ctx) => DemoGoodsAction(),
                         padding: false),
-                    PageCell("GoodsAction 商品导航", (ctx) => DemoGoodsAction(),
-                        padding: false),
-                    PageCell("SubmitBar 提交订单栏", (ctx) => DemoSubmitBar(),
+                    PageCell("SubmitBar", (ctx) => DemoSubmitBar(),
                         padding: false),
                   ],
                 ),
@@ -200,7 +193,8 @@ class PageCell extends StatelessWidget {
   final bool padding;
 
   void _openPage(BuildContext context) {
-    Navigator.push(context, MaterialPageRoute(builder: (context) {
+    Navigator.push<dynamic>(context,
+        MaterialPageRoute<dynamic>(builder: (context) {
       if (!withScaffold) {
         return builder(context);
       }

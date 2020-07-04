@@ -22,28 +22,28 @@ class _DemoNumberKeyboard extends State<DemoNumberKeyboard> {
         child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        title("基础用法"),
+        title("Basic usage"),
         NButton(
-          text: "弹出默认键盘",
+          text: "The default keyboard pops up",
           type: "primary",
           onClick: () {
             NumberKeyboard(
-              title: "默认键盘",
-              closeButtomText: "完成",
+              title: "Default keyboard",
+              closeButtomText: "Complete",
               extraKey: ".",
             ).show(context);
           },
         ),
-        title("双向绑定"),
+        title("Two-way binding"),
         Field(
-          placeholder: "点此输入",
+          placeholder: "Click here",
           controller: testInput,
           readonly: true,
           onClick: () {
             NumberKeyboard(
                 value: testInput.text,
                 maxlength: 6,
-                closeButtomText: "完成",
+                closeButtomText: "complete",
                 extraKey: ".",
                 onChange: (String val) {
                   setState(() {

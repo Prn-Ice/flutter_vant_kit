@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:flutter_vant_kit/main.dart';
+import 'package:intl/intl.dart';
 
 class DemoCoupon extends StatefulWidget {
   @override
@@ -37,7 +37,7 @@ class _DemoCoupon extends State<DemoCoupon> {
         child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        title("基础用法"),
+        title("Basic usage"),
         Cell(
           title: "优惠券",
           value: _discount ?? "${coupons.length}张可用",

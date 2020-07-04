@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../utils/index.dart';
 import 'package:flutter_vant_kit/main.dart';
+
+import '../utils/index.dart';
 
 class DemoSubmitBar extends StatefulWidget {
   @override
@@ -21,7 +22,7 @@ class _DemoSubmitBar extends State<DemoSubmitBar> {
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-          title("基础用法"),
+          title("Basic usage"),
           SubmitBar(buttonText: "提交订单", price: 30.50),
           title("禁用状态"),
           SubmitBar(

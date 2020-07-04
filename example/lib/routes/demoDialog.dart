@@ -10,35 +10,38 @@ class DemoDialog extends StatefulWidget {
 
 class _DemoDialog extends State<DemoDialog> {
   void _showDialog1(BuildContext context) {
-    showDialog(
+    showDialog<dynamic>(
       context: context,
       builder: (_) {
         return NDialog(
-          title: '标题',
-          message: "代码是写出来给人看的，附带能在机器上运行",
+          title: 'Title',
+          message:
+              "The code is written for people to see, and it can run on the machine",
         );
       },
     );
   }
 
   void _showDialog2(BuildContext context) {
-    showDialog(
+    showDialog<dynamic>(
       context: context,
       builder: (_) {
         return NDialog(
-          message: "代码是写出来给人看的，附带能在机器上运行",
+          message:
+              "The code is written for people to see, and it can run on the machine",
         );
       },
     );
   }
 
   void _showDialog3(BuildContext context) {
-    showDialog(
+    showDialog<dynamic>(
       context: context,
       builder: (_) {
         return NDialog(
-          title: "标题",
-          message: "代码是写出来给人看的，附带能在机器上运行",
+          title: "Title",
+          message:
+              "The code is written for people to see, and it can run on the machine",
           showCancelButton: true,
         );
       },
@@ -46,12 +49,13 @@ class _DemoDialog extends State<DemoDialog> {
   }
 
   void _showDialog4(BuildContext context) {
-    showDialog(
+    showDialog<dynamic>(
       context: context,
       builder: (_) {
         return NDialog(
-            title: "标题",
-            message: "代码是写出来给人看的，附带能在机器上运行",
+            title: "Title",
+            message:
+                "The code is written for people to see, and it can run on the machine",
             showCancelButton: true,
             confirmButtonColor: Colors.blueAccent,
             confirmTextColor: Colors.white,
@@ -66,12 +70,13 @@ class _DemoDialog extends State<DemoDialog> {
   }
 
   void _showDialog5(BuildContext context) {
-    showDialog(
+    showDialog<dynamic>(
       context: context,
       builder: (_) {
         return NDialog(
-          title: "标题",
-          message: "代码是写出来给人看的，附带能在机器上运行",
+          title: "title",
+          message:
+              "The code is written for people to see, and it can run on the machine",
           showCancelButton: true,
           beforeClose: () {
             return Future.delayed(Duration(seconds: 1), () {});
@@ -82,11 +87,11 @@ class _DemoDialog extends State<DemoDialog> {
   }
 
   void _showDialog6(BuildContext context) {
-    showDialog(
+    showDialog<dynamic>(
       context: context,
       builder: (_) {
         return NDialog(
-          title: "标题",
+          title: "Title",
           child: Container(
             padding: EdgeInsets.all(24),
             child: Image.network("https://img.yzcdn.cn/vant/apple-1.jpg"),
@@ -113,11 +118,11 @@ class _DemoDialog extends State<DemoDialog> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          title("基础用法"),
+          title("Basic usage"),
           Row(
             children: <Widget>[
               NButton(
-                text: "提示弹窗",
+                text: "Prompt popup",
                 type: "primary",
                 onClick: () {
                   _showDialog1(context);
@@ -125,7 +130,7 @@ class _DemoDialog extends State<DemoDialog> {
               ),
               SizedBox(width: 10),
               NButton(
-                text: "提示弹窗(无标题)",
+                text: "Prompt popup (untitled)",
                 type: "primary",
                 onClick: () {
                   _showDialog2(context);
@@ -133,11 +138,11 @@ class _DemoDialog extends State<DemoDialog> {
               ),
             ],
           ),
-          title("确认弹窗"),
+          title("Confirm popup"),
           Row(
             children: <Widget>[
               NButton(
-                text: "确认弹窗",
+                text: "Confirm popup",
                 type: "primary",
                 onClick: () {
                   _showDialog3(context);
@@ -145,7 +150,7 @@ class _DemoDialog extends State<DemoDialog> {
               ),
               SizedBox(width: 10),
               NButton(
-                text: "自定义确认弹窗",
+                text: "Custom confirmation",
                 type: "primary",
                 onClick: () {
                   _showDialog4(context);
@@ -153,11 +158,11 @@ class _DemoDialog extends State<DemoDialog> {
               ),
             ],
           ),
-          title("异步调用"),
+          title("Asynchronous call"),
           Row(
             children: <Widget>[
               NButton(
-                text: "异步调用",
+                text: "Asynchronous call",
                 type: "primary",
                 onClick: () {
                   _showDialog5(context);
@@ -165,11 +170,11 @@ class _DemoDialog extends State<DemoDialog> {
               ),
             ],
           ),
-          title("自定义内容"),
+          title("Custom content"),
           Row(
             children: <Widget>[
               NButton(
-                text: "自定义内容",
+                text: "Custom content",
                 type: "primary",
                 onClick: () {
                   _showDialog6(context);

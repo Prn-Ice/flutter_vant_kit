@@ -20,7 +20,7 @@ class _DemoProgress extends State<DemoProgress> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          title("基础用法"),
+          title("Basic usage"),
           Progress(percentage: 50, showPivot: true),
           title("线条粗细"),
           Progress(percentage: 50, strokeWidth: 8, showPivot: true),

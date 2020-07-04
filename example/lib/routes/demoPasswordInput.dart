@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../utils/index.dart';
 import 'package:flutter_vant_kit/main.dart';
+
+import '../utils/index.dart';
 
 class DemoPasswordInput extends StatefulWidget {
   @override
@@ -23,17 +24,20 @@ class _DemoPasswordInput extends State<DemoPasswordInput> {
         child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        title("基础用法"),
+        title("Basic usage"),
         PasswordInput(
           value: _value,
-          info: "密码为 6 位数字",
+          info: "Password is 6 Digits",
           onSubmitted: (val) {
             Utils.toast("onSubmitted $val");
           },
         ),
-        title("自定义长度"),
-        PasswordInput(value: "1234", info: "请输入短信验证码", length: 4),
-        title("明文展示"),
+        title("Custom length"),
+        PasswordInput(
+            value: "1234",
+            info: "Please enter SMS verification code",
+            length: 4),
+        title("Plaintext display"),
         PasswordInput(
           value: "12",
           mask: false,

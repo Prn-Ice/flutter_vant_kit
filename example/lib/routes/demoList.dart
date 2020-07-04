@@ -33,11 +33,11 @@ class _DemoList extends State<DemoList> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("List 列表"),
+        title: Text("List"),
         bottom: TabBar(
           tabs: <Widget>[
-            Tab(text: "基础用法"),
-            Tab(text: "错误提示"),
+            Tab(text: "Basic usage"),
+            Tab(text: "Error message"),
           ],
           controller: _tabController,
         ),
@@ -47,8 +47,9 @@ class _DemoList extends State<DemoList> with SingleTickerProviderStateMixin {
         children: <Widget>[
           NList(
             finished: _finished1,
-            finishedText: "没有更多了",
-            child: List.generate(_dataList1.length, (i) => _buildItem(_dataList1[i])),
+            finishedText: "No more",
+            child: List.generate(
+                _dataList1.length, (i) => _buildItem(_dataList1[i])),
             onLoad: () {
               return Future.delayed(const Duration(milliseconds: 300), () {
                 setState(() {
@@ -61,10 +62,11 @@ class _DemoList extends State<DemoList> with SingleTickerProviderStateMixin {
           ),
           NList(
             finished: _finished2,
-            finishedText: "没有更多了",
+            finishedText: "No more",
             error: _error,
-            errorText: "请求失败，点击重新加载",
-            child: List.generate(_dataList2.length, (i) => _buildItem(_dataList2[i])),
+            errorText: "Request failed, click reload",
+            child: List.generate(
+                _dataList2.length, (i) => _buildItem(_dataList2[i])),
             onLoad: () {
               if (_dataList2.length != 0) {
                 setState(() {

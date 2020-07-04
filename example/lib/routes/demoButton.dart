@@ -31,98 +31,98 @@ class _DemoButton extends State<DemoButton> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            title("默认按钮"),
+            title("Default button"),
             Wrap(
               spacing: 12,
               runSpacing: 12,
               children: <Widget>[
                 NButton(
-                  text: "默认按钮",
+                  text: "Default button",
                   onClick: () {},
                 ),
                 NButton(
-                  text: "主要按钮",
+                  text: "Main button",
                   type: "primary",
                   onClick: () {},
                 ),
                 NButton(
-                  text: "信息按钮",
+                  text: "Information button",
                   type: "info",
                   onClick: () {},
                 ),
                 NButton(
-                  text: "危险按钮",
+                  text: "Danger button",
                   type: "danger",
                   onClick: () {},
                 ),
                 NButton(
-                  text: "警告按钮",
+                  text: "Warning button",
                   type: "warning",
                   onClick: () {},
                 ),
               ],
             ),
-            title("朴素按钮"),
+            title("Naive button"),
             Wrap(
               spacing: 12,
               children: <Widget>[
                 NButton(
                   plain: true,
-                  text: "朴素按钮",
+                  text: "Naive button",
                   type: "primary",
                   onClick: () {},
                 ),
                 NButton(
                   plain: true,
-                  text: "朴素按钮",
+                  text: "Naive button",
                   type: "info",
                   onClick: () {},
                 )
               ],
             ),
-            title("细边框"),
+            title("Thin border"),
             Wrap(
               spacing: 12,
               children: <Widget>[
                 NButton(
                   plain: true,
                   hairline: true,
-                  text: "细边框按钮",
+                  text: "Thin border button",
                   type: "primary",
                   onClick: () {},
                 ),
                 NButton(
                   plain: true,
                   hairline: true,
-                  text: "细边框按钮",
+                  text: "Thin border button",
                   type: "info",
                   onClick: () {},
                 )
               ],
             ),
-            title("禁用状态"),
+            title("Disabled"),
             Wrap(
               spacing: 12,
               runSpacing: 12,
               children: <Widget>[
                 NButton(
                   disabled: true,
-                  text: "禁用状态",
+                  text: "Disabled",
                 ),
                 NButton(
                   disabled: true,
-                  text: "禁用状态",
+                  text: "Disabled",
                   type: "primary",
                 ),
                 NButton(
                   plain: true,
                   disabled: true,
-                  text: "禁用状态",
+                  text: "Disabled",
                   type: "info",
                 )
               ],
             ),
-            title("加载状态"),
+            title("Loading state"),
             Wrap(
               spacing: 12,
               runSpacing: 12,
@@ -133,13 +133,13 @@ class _DemoButton extends State<DemoButton> {
                 ),
                 NButton(
                   loading: true,
-                  text: "加载中...",
+                  text: "Loading...",
                   type: "primary",
                 ),
                 NButton(
                   plain: true,
                   loading: _loading,
-                  text: "点击2S后恢复",
+                  text: "Recover after clicking 2 S",
                   type: "info",
                   onClick: () {
                     setState(() {
@@ -160,39 +160,39 @@ class _DemoButton extends State<DemoButton> {
                 )
               ],
             ),
-            title("按钮形状"),
+            title("Button shape"),
             Wrap(
               spacing: 12,
               runSpacing: 12,
               children: <Widget>[
                 NButton(
-                  text: "方形按钮",
+                  text: "Square button",
                   type: "primary",
                   square: true,
                   onClick: () {},
                 ),
                 NButton(
-                  text: "圆形按钮",
+                  text: "Round button",
                   type: "info",
                   round: true,
                   onClick: () {},
                 ),
                 NButton(
                   plain: true,
-                  text: "圆形按钮",
+                  text: "Round button",
                   type: "primary",
                   round: true,
                   onClick: () {},
                 ),
                 NButton(
                   block: true,
-                  text: "块级按钮",
+                  text: "Block level buttons",
                   type: "info",
                   onClick: () {},
                 )
               ],
             ),
-            title("图标边框"),
+            title("Icon border"),
             Wrap(
               spacing: 12,
               runSpacing: 12,
@@ -203,13 +203,13 @@ class _DemoButton extends State<DemoButton> {
                   onClick: () {},
                 ),
                 NButton(
-                  text: "按钮",
+                  text: "push button",
                   icon: Icon(Icons.star_border, color: Colors.white, size: 18),
                   type: "primary",
                   onClick: () {},
                 ),
                 NButton(
-                  text: "按钮",
+                  text: "push button",
                   plain: true,
                   icon: SizedBox(
                     width: 18,
@@ -220,7 +220,7 @@ class _DemoButton extends State<DemoButton> {
                 )
               ],
             ),
-            title("按钮尺寸"),
+            title("Button size"),
             Wrap(
               spacing: 12,
               runSpacing: 12,
@@ -229,53 +229,53 @@ class _DemoButton extends State<DemoButton> {
                 NButton(
                   type: "primary",
                   size: "large",
-                  text: "大号按钮",
+                  text: "Large button",
                   onClick: () {},
                 ),
                 NButton(
                   type: "primary",
                   size: "normal",
-                  text: "普通按钮",
+                  text: "Normal button",
                   onClick: () {},
                 ),
                 NButton(
                   type: "primary",
                   size: "small",
-                  text: "小型按钮",
+                  text: "Small button",
                   onClick: () {},
                 ),
                 NButton(
                   type: "primary",
                   size: "mini",
-                  text: "迷你按钮",
+                  text: "Mini button",
                   onClick: () {},
                 ),
               ],
             ),
-            title("自定义颜色"),
+            title("Custom colors"),
             Wrap(
               spacing: 12,
               runSpacing: 12,
               children: <Widget>[
                 NButton(
-                  text: "单色按钮",
+                  text: "Monochrome button",
                   color: Colors.purple,
                   onClick: () {},
                 ),
                 NButton(
-                  text: "单色按钮",
+                  text: "Monochrome button",
                   color: Colors.purple,
                   plain: true,
                   onClick: () {},
                 ),
                 NButton(
-                  text: "渐变色按钮",
+                  text: "Gradient button",
                   color: LinearGradient(
                       colors: [Colors.lightBlue[300], Colors.blueAccent]),
                   onClick: () {},
                 ),
                 NButton(
-                  text: "渐变色按钮",
+                  text: "Gradient button",
                   color: LinearGradient(
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
@@ -283,7 +283,7 @@ class _DemoButton extends State<DemoButton> {
                   onClick: () {},
                 ),
                 NButton(
-                  text: "渐变色按钮",
+                  text: "Gradient button",
                   color: RadialGradient(
                       radius: 2,
                       colors: [Colors.lightBlue[300], Colors.blueAccent]),

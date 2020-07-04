@@ -22,17 +22,17 @@ class _DemoCircle extends State<DemoCircle> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          title("基础用法"),
+          title("Basic usage"),
           Progress(
               percentage: 30,
               type: "circular",
               showPivot: true,
               circularSize: 120),
-          title("样式定制"),
+          title("Style customization"),
           Row(
             children: <Widget>[
               NButton(
-                text: "增加",
+                text: "Increase",
                 type: "primary",
                 onClick: () {
                   setState(() {
@@ -42,7 +42,7 @@ class _DemoCircle extends State<DemoCircle> {
               ),
               SizedBox(width: 6),
               NButton(
-                text: "减少",
+                text: "Decrease",
                 type: "danger",
                 onClick: () {
                   setState(() {
@@ -57,20 +57,20 @@ class _DemoCircle extends State<DemoCircle> {
               type: "circular",
               showPivot: true,
               strokeWidth: 10,
-              pivotText: "宽度定制"),
+              pivotText: "Customized width"),
           Progress(
               percentage: percentage,
               type: "circular",
               showPivot: true,
               color: Colors.redAccent,
-              pivotText: "颜色定制"),
+              pivotText: "Color customization"),
           Progress(
               percentage: percentage,
               type: "circular",
               showPivot: true,
               circularSize: 150,
               color: Colors.purple,
-              pivotText: "大小定制"),
+              pivotText: "Size customization"),
           SizedBox(
             height: 20,
           )

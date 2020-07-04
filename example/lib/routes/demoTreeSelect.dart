@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../utils/index.dart';
 import 'package:flutter_vant_kit/main.dart';
+
+import '../utils/index.dart';
 
 class DemoTreeSelect extends StatefulWidget {
   @override
@@ -102,7 +103,7 @@ class _DemoTreeSelect extends State<DemoTreeSelect> {
                   Utils.toast(list.toString());
                 },
               ),
-              title("自定义内容"),
+              title("Custom content"),
               TreeSelect(
                 list: list2,
                 height: 200,

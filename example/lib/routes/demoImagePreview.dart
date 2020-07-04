@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../utils/index.dart';
 import 'package:flutter_vant_kit/main.dart';
+
+import '../utils/index.dart';
 
 class DemoImagePreview extends StatefulWidget {
   @override
@@ -28,9 +29,9 @@ class _DemoImagePreview extends State<DemoImagePreview> {
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-          title("基础用法"),
+          title("Basic usage"),
           NButton(
-            text: "预览图片",
+            text: "preview picture",
             type: "primary",
             onClick: () {
               showDialog(
@@ -43,9 +44,9 @@ class _DemoImagePreview extends State<DemoImagePreview> {
                   });
             },
           ),
-          title("指定初始位置"),
+          title("Specify initial position"),
           NButton(
-            text: "指定初始位置",
+            text: "Specify initial position",
             type: "primary",
             onClick: () {
               showDialog(

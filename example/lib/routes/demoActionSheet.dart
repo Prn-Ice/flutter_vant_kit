@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../utils/index.dart';
 import 'package:flutter_vant_kit/main.dart';
+
+import '../utils/index.dart';
 
 class DemoActionSheet extends StatefulWidget {
   @override
@@ -9,15 +10,15 @@ class DemoActionSheet extends StatefulWidget {
 
 class _DemoActionSheet extends State<DemoActionSheet> {
   List<ActionSheetItem> actionList = [
-    ActionSheetItem(name: "选项"),
-    ActionSheetItem(name: "选项"),
-    ActionSheetItem(name: "选项", subname: "基本信息"),
+    ActionSheetItem(name: "Options"),
+    ActionSheetItem(name: "Options"),
+    ActionSheetItem(name: "Options", subname: "Basic Information"),
   ];
 
   List<ActionSheetItem> actionList2 = [
-    ActionSheetItem(name: "选项", color: Colors.green),
+    ActionSheetItem(name: "Options", color: Colors.green),
     ActionSheetItem(loading: true),
-    ActionSheetItem(name: "选项", disabled: true),
+    ActionSheetItem(name: "Options", disabled: true),
   ];
 
   Widget title(String title) {
@@ -33,9 +34,9 @@ class _DemoActionSheet extends State<DemoActionSheet> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          title("基础用法"),
+          title("Basic usage"),
           NButton(
-            text: "弹出菜单",
+            text: "Popup menu",
             type: "primary",
             onClick: () {
               ActionSheet(
@@ -45,43 +46,43 @@ class _DemoActionSheet extends State<DemoActionSheet> {
                   }).show(context);
             },
           ),
-          title("选项状态"),
+          title("Option status"),
           NButton(
-            text: "弹出菜单",
+            text: "Popup menu",
             type: "primary",
             onClick: () {
               ActionSheet(actions: actionList2).show(context);
             },
           ),
-          title("展示取消按钮"),
+          title("Show cancel button"),
           NButton(
-            text: "弹出菜单",
+            text: "Popup menu",
             type: "primary",
             onClick: () {
               ActionSheet(
                 actions: actionList,
-                cancelText: "取消",
+                cancelText: "cancel",
                 onCancel: () {
                   Utils.toast("cancel");
                 },
               ).show(context);
             },
           ),
-          title("展示描述信息"),
+          title("Display descriptive information"),
           NButton(
-            text: "弹出菜单",
+            text: "Popup menu",
             type: "primary",
             onClick: () {
               ActionSheet(
                 actions: actionList,
-                title: "标题",
-                description: "这是一段描述信息",
+                title: "title",
+                description: "This is a descriptive message",
               ).show(context);
             },
           ),
-          title("展示标题栏"),
+          title("Show title bar"),
           NButton(
-            text: "弹出菜单",
+            text: "Popup menu",
             type: "primary",
             onClick: () {
               ActionSheet(
@@ -91,7 +92,7 @@ class _DemoActionSheet extends State<DemoActionSheet> {
                   alignment: AlignmentDirectional.topStart,
                   child: Text("data"),
                 ),
-                title: "标题",
+                title: "title",
                 closeIcon: Icons.highlight_off,
               ).show(context);
             },

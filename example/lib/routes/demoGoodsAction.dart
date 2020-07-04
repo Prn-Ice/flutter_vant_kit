@@ -20,7 +20,7 @@ class _DemoGoodsAction extends State<DemoGoodsAction> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          title("基础用法"),
+          title("Basic usage"),
           GoodsAction(
             actions: [
               ActionButtonItem(text: "客服", icon: Icons.chat_bubble_outline),
@@ -75,7 +75,7 @@ class _DemoGoodsAction extends State<DemoGoodsAction> {
                       colors: [Color(0xffff6034), Color(0xffee0a24)])),
             ],
           ),
-          title("自定义内容"),
+          title("Custom content"),
           GoodsAction(
             actions: [
               ActionButtonItem(

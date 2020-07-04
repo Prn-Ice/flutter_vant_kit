@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../utils/index.dart';
 import 'package:flutter_vant_kit/main.dart';
+
+import '../utils/index.dart';
 
 class DemoAddressEdit extends StatefulWidget {
   @override
@@ -23,11 +24,11 @@ class _DemoAddressEdit extends State<DemoAddressEdit> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          title("基础用法"),
+          title("Basic usage"),
           AddressEdit(
             showDelete: true,
             showSetDefault: true,
-            addressInfo: {
+            addressInfo: <String, dynamic>{
               "name": "张三",
               "tel": "18345234123",
               "province": "广东省",

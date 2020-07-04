@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../utils/index.dart';
 import 'package:flutter_vant_kit/main.dart';
+
+import '../utils/index.dart';
 
 class DemoCard extends StatefulWidget {
   @override
@@ -21,7 +22,7 @@ class _DemoCard extends State<DemoCard> {
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-          title("基础用法"),
+          title("Basic usage"),
           NCard(
               title: "商品名称",
               desc: "描述信息",
@@ -41,7 +42,7 @@ class _DemoCard extends State<DemoCard> {
               Utils.toast("Clicked");
             },
           ),
-          title("自定义内容"),
+          title("Custom content"),
           NCard(
             customTitle: Text("商品名称",
                 style: TextStyle(fontSize: 16, color: Colors.blueAccent)),

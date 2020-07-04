@@ -20,36 +20,36 @@ class _DemoLoading extends State<DemoLoading> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          title("基础用法"),
+          title("Basic usage"),
           Loading(),
-          title("自定义颜色"),
+          title("Custom colors"),
           Loading(
             color: Colors.blueAccent,
           ),
-          title("加载文案"),
+          title("Load copy"),
           Loading(
             color: Colors.blueAccent,
-            text: "加载中...",
+            text: "Loading...",
           ),
-          title("垂直排列"),
+          title("Vertical arrangement"),
           Loading(
             color: Colors.blueAccent,
-            text: "加载中...",
+            text: "Loading...",
             size: 20,
             vertical: true,
           ),
-          title("自定义 Loading"),
+          title("Customize Loading"),
           Container(
-            width: 100,
+            width: 150,
             child: Loading(
               loading: Image.network(
                   "https://loading.io/mod/spinner/lava-lamp/sample.gif"),
-              text: "加载中...",
+              text: "Loading...",
             ),
           ),
-          title("显示Loading"),
+          title("Display Loading"),
           NButton(
-            text: "显示loading",
+            text: "Show loading",
             type: "primary",
             onClick: () {
               showDialog(
@@ -64,7 +64,7 @@ class _DemoLoading extends State<DemoLoading> {
                         padding: EdgeInsets.all(20),
                         child: Loading(
                           color: Colors.blueAccent,
-                          text: "加载中...",
+                          text: "Loading...",
                         ),
                       ),
                     );

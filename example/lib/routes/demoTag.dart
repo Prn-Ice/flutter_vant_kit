@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../utils/index.dart';
 import 'package:flutter_vant_kit/main.dart';
+
+import '../utils/index.dart';
 
 class DemoTag extends StatefulWidget {
   @override
@@ -21,7 +22,7 @@ class _DemoTag extends State<DemoTag> {
         child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        title("基础用法"),
+        title("Basic usage"),
         Row(
           children: <Widget>[
             Tag(text: "标签"),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../utils/index.dart';
 import 'package:flutter_vant_kit/main.dart';
+
+import '../utils/index.dart';
 
 class DemoStepper extends StatefulWidget {
   @override
@@ -24,7 +25,7 @@ class _DemoStepper extends State<DemoStepper> {
           CellGroup(
             children: <Widget>[
               Cell(
-                title: "基础用法",
+                title: "Basic usage",
                 customRight: Steppers(
                   onChange: (val) {
                     Utils.toast(val);
@@ -32,7 +33,7 @@ class _DemoStepper extends State<DemoStepper> {
                 ),
               ),
               Cell(
-                title: "步长设置",
+                title: "Step setting",
                 customRight: Steppers(
                   step: 2,
                   onChange: (val) {
@@ -41,7 +42,7 @@ class _DemoStepper extends State<DemoStepper> {
                 ),
               ),
               Cell(
-                title: "限制输入范围",
+                title: "Limit input range",
                 customRight: Steppers(
                   value: 5,
                   min: 5,
@@ -52,11 +53,11 @@ class _DemoStepper extends State<DemoStepper> {
                 ),
               ),
               Cell(
-                title: "禁用状态",
+                title: "Disabled",
                 customRight: Steppers(value: 1, disabled: true),
               ),
               Cell(
-                title: "禁用输入框状态",
+                title: "Disable input box state",
                 customRight: Steppers(
                   value: 1,
                   disabledInput: true,
@@ -64,7 +65,7 @@ class _DemoStepper extends State<DemoStepper> {
                 ),
               ),
               Cell(
-                title: "小数点",
+                title: "Decimal point",
                 customRight: Steppers(
                   value: 1,
                   step: 0.2,
@@ -74,7 +75,7 @@ class _DemoStepper extends State<DemoStepper> {
                 ),
               ),
               Cell(
-                title: "自定义大小",
+                title: "Custom size",
                 customRight: Steppers(
                   value: 1,
                   size: 28,

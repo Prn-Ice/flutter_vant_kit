@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../utils/index.dart';
 import 'package:flutter_vant_kit/main.dart';
+
+import '../utils/index.dart';
 
 class DemoSearch extends StatefulWidget {
   @override
@@ -24,9 +25,9 @@ class _DemoSearch extends State<DemoSearch> {
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-          title("基础用法"),
+          title("Basic usage"),
           Search(),
-          title("事件监听"),
+          title("Event monitoring"),
           Search(
             showAction: true,
             onSubmitted: (val) {
@@ -36,20 +37,20 @@ class _DemoSearch extends State<DemoSearch> {
               Utils.toast("canceled");
             },
           ),
-          title("自定义样式"),
+          title("Custom style"),
           Search(
             shape: "round",
             background: Color(0xfff2f3DA),
             showAction: true,
             maxLength: 16,
-            placeholder: "请输入任何东西",
+            placeholder: "Please enter anything",
           ),
-          title("自定义按钮"),
+          title("Custom button"),
           Search(
             showAction: true,
             left: Row(
               children: <Widget>[
-                Text("地址"),
+                Text("Address"),
                 SizedBox(width: 6),
                 GestureDetector(
                   child: Icon(_icon, color: _color, size: 18),
@@ -72,10 +73,10 @@ class _DemoSearch extends State<DemoSearch> {
                   onTap: () {
                     Utils.toast("clicked Right");
                   },
-                  child: Text("搜索"),
+                  child: Text("search"),
                 ),
                 SizedBox(width: 4),
-                Text("收藏")
+                Text("collect")
               ],
             ),
           )

@@ -20,7 +20,7 @@ class _DemoPagination extends State<DemoPagination> {
         child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        title("基础用法"),
+        title("Basic usage"),
         Pagination(
           totalItems: 36,
         ),

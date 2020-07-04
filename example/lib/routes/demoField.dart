@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../utils/index.dart';
 import 'package:flutter_vant_kit/main.dart';
+
+import '../utils/index.dart';
 
 class DemoField extends StatefulWidget {
   @override
@@ -39,11 +40,11 @@ class _DemoField extends State<DemoField> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          title("基础用法"),
+          title("Basic usage"),
           CellGroup(
             children: <Widget>[
               Field(
-                placeholder: "请输入用户名",
+                placeholder: "please enter user name",
                 controller: testInput1,
                 onChange: (val) {
                   Utils.toast("text changed: $val");
@@ -54,11 +55,11 @@ class _DemoField extends State<DemoField> {
               )
             ],
           ),
-          title("自定义类型"),
+          title("Custom type"),
           CellGroup(children: <Widget>[
             Field(
-              label: "用户名",
-              placeholder: "请输入用户名",
+              label: "user name",
+              placeholder: "please enter user name",
               controller: testInput2,
               maxLength: 10,
               clearable: true,
@@ -69,18 +70,18 @@ class _DemoField extends State<DemoField> {
               },
             ),
             Field(
-                label: "密码",
-                placeholder: "请输入密码",
+                label: "secret code",
+                placeholder: "Please enter the password",
                 controller: testInput3,
                 require: true,
                 type: "password"),
           ]),
-          title("禁用输入框"),
+          title("Disable input box"),
           CellGroup(
             children: <Widget>[
               Field(
-                label: "用户名",
-                placeholder: "输入框已禁用",
+                label: "user",
+                placeholder: "Input box is disabled",
                 disabled: true,
                 controller: testInput4,
                 leftIcon: Icons.perm_identity,
@@ -90,12 +91,12 @@ class _DemoField extends State<DemoField> {
               )
             ],
           ),
-          title("错误提示"),
+          title("Error message"),
           CellGroup(
             children: <Widget>[
               Field(
-                label: "用户名",
-                placeholder: "请输入用户名",
+                label: "user",
+                placeholder: "please enter user name",
                 error: isEmptyName(testInput5.text),
                 controller: testInput5,
                 maxLength: 10,
@@ -107,10 +108,12 @@ class _DemoField extends State<DemoField> {
                 },
               ),
               Field(
-                label: "手机号",
-                placeholder: "请输入手机号",
+                label: "phone",
+                placeholder: "Please enter phone number",
                 controller: testInput6,
-                errorMessage: isErrorPhone(testInput6.text) ? "手机号格式错误" : null,
+                errorMessage: isErrorPhone(testInput6.text)
+                    ? "Malformed phone number"
+                    : null,
                 maxLength: 11,
                 clearable: true,
                 onChange: (val) {
@@ -121,28 +124,28 @@ class _DemoField extends State<DemoField> {
               ),
             ],
           ),
-          title("插入按钮"),
+          title("Insert button"),
           CellGroup(
             children: <Widget>[
               Field(
-                label: "短信验证码",
-                placeholder: "请输入短信验证码",
+                label: "SMS",
+                placeholder: "Please enter SMS verification code",
                 controller: testInput7,
                 right: NButton(
-                  text: "发送验证码",
+                  text: "Send the verification code",
                   type: "primary",
                   size: "small",
-                  onClick: () => {},
+                  onClick: () {},
                 ),
               ),
             ],
           ),
-          title("显示字数统计"),
+          title("Show word count"),
           CellGroup(
             children: <Widget>[
               Field(
-                  label: "留言",
-                  placeholder: "请输入留言",
+                  label: "leave",
+                  placeholder: "Please enter a message",
                   controller: testInput8,
                   type: "textarea",
                   rows: 5,

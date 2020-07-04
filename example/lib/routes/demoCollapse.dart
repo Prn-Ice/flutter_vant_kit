@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../utils/index.dart';
 import 'package:flutter_vant_kit/main.dart';
+
+import '../utils/index.dart';
 
 class DemoCollapse extends StatefulWidget {
   @override
@@ -21,53 +22,59 @@ class _DemoCollapse extends State<DemoCollapse> {
         child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        title("基础用法"),
+        title("Basic usage"),
         Collapse(
           list: [
             CollapseItem(
-              title: "标题1",
-              content: "代码是写出来给人看的，附带能在机器上运行",
+              title: "Heading 1",
+              content:
+                  "The code is written for people to see, and it can run on the machine",
             ),
             CollapseItem(
-              title: "标题2",
-              content: "代码是写出来给人看的，附带能在机器上运行",
+              title: "Heading 2",
+              content:
+                  "The code is written for people to see, and it can run on the machine",
             ),
             CollapseItem(
-              title: "标题3",
-              label: "不能点击",
+              title: "Heading 3",
+              label: "Can't click",
               clickable: false,
-              content: "代码是写出来给人看的，附带能在机器上运行",
+              content:
+                  "The code is written for people to see, and it can run on the machine",
             )
           ],
           onChange: (List list) {
             Utils.toast("Expanded! $list");
           },
         ),
-        title("手风琴"),
+        title("Accordion"),
         Collapse(
           accordion: true,
           name: ['0'],
           list: [
             CollapseItem(
-              title: "标题1",
-              content: "代码是写出来给人看的，附带能在机器上运行",
+              title: "Heading 1",
+              content:
+                  "The code is written for people to see, and it can run on the machine",
             ),
             CollapseItem(
-              title: "标题2",
-              content: "代码是写出来给人看的，附带能在机器上运行",
+              title: "Heading 2",
+              content:
+                  "The code is written for people to see, and it can run on the machine",
             ),
             CollapseItem(
-              title: "标题3",
-              content: "代码是写出来给人看的，附带能在机器上运行",
+              title: "Heading 3",
+              content:
+                  "The code is written for people to see, and it can run on the machine",
             )
           ],
         ),
-        title("自定义标题内容"),
+        title("Custom Heading content"),
         Collapse(
           border: false,
           list: [
             CollapseItem(
-              title: "标题1",
+              title: "Heading 1",
               customTitle: Padding(
                 padding: EdgeInsets.only(left: 6),
                 child: Icon(Icons.info_outline,
@@ -78,14 +85,15 @@ class _DemoCollapse extends State<DemoCollapse> {
                   Icon(Icons.favorite, size: 16, color: Colors.blueAccent),
               child: Padding(
                 padding: EdgeInsets.all(12),
-                child: Text("代码是写出来给人看的，附带能在机器上运行",
+                child: Text(
+                    "The code is written for people to see, and it can run on the machine",
                     style: TextStyle(color: Colors.red, fontSize: 12)),
               ),
             ),
             CollapseItem(
-              title: "标题2",
+              title: "Heading 2",
               name: 'b',
-              value: "内容",
+              value: "content",
               icon: Icons.store,
               child: Padding(
                 padding: EdgeInsets.all(12),

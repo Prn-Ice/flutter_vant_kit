@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../utils/index.dart';
 import 'package:flutter_vant_kit/main.dart';
+
+import '../utils/index.dart';
 
 class DemoNoticeBar extends StatefulWidget {
   @override
@@ -19,26 +20,30 @@ class _DemoNoticeBar extends State<DemoNoticeBar> {
   Widget build(BuildContext context) {
     return ListView(
       children: <Widget>[
-        title("基础用法"),
+        title("Basic usage"),
         NoticeBar(
-          text: "足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。",
+          text:
+              "The FA Cup front staged the Guangzhou Derby for the second year in a row. Last season, Evergrande eliminated R&F with a total score of 5-3 in two rounds.",
           leftIcon: Icons.volume_up,
         ),
-        title("禁止滚动"),
+        title("No scrolling"),
         NoticeBar(
           scrollable: false,
           leftIcon: Icons.volume_up,
-          text: "足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。",
+          text:
+              "The FA Cup front staged the Guangzhou Derby for the second year in a row. Last season, Evergrande eliminated R&F with a total score of 5-3 in two rounds.",
         ),
-        title("多行展示"),
+        title("Multi-line display"),
         NoticeBar(
           scrollable: false,
           wrapable: true,
-          text: "足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。",
+          text:
+              "The FA Cup front staged the Guangzhou Derby for the second year in a row. Last season, Evergrande eliminated R&F with a total score of 5-3 in two rounds.",
         ),
-        title("通知栏模式"),
+        title("Notification bar mode"),
         NoticeBar(
-          text: "足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。",
+          text:
+              "The FA Cup front staged the Guangzhou Derby for the second year in a row. Last season, Evergrande eliminated R&F with a total score of 5-3 in two rounds.",
           mode: "closeable",
           onClose: () {
             Utils.toast("NoticeBar closed");
@@ -48,15 +53,17 @@ class _DemoNoticeBar extends State<DemoNoticeBar> {
           height: 4,
         ),
         NoticeBar(
-          text: "足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。",
+          text:
+              "The FA Cup front staged the Guangzhou Derby for the second year in a row. Last season, Evergrande eliminated R&F with a total score of 5-3 in two rounds.",
           mode: "link",
           onClick: () {
             Utils.toast("NoticeBar clicked");
           },
         ),
-        title("自定义样式"),
+        title("Custom style"),
         NoticeBar(
-          text: "足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。",
+          text:
+              "The FA Cup front staged the Guangzhou Derby for the second year in a row. Last season, Evergrande eliminated R&F with a total score of 5-3 in two rounds.",
           leftIcon: Icons.info_outline,
           background: Color(0xffecf9ff),
           color: Color(0xff1989fa),

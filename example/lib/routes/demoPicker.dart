@@ -9,26 +9,26 @@ class DemoPicker extends StatefulWidget {
 
 class _DemoPicker extends State<DemoPicker> {
   dynamic options = [
-    PickerItem("杭州"),
-    PickerItem("宁波"),
-    PickerItem("温州"),
-    PickerItem("嘉兴"),
-    PickerItem("湖州"),
+    PickerItem("Hangzhou"),
+    PickerItem("Ningbo"),
+    PickerItem("Wenzhou"),
+    PickerItem("Jiaxing"),
+    PickerItem("Huzhou"),
   ];
 
   dynamic options1 = [
-    PickerItem("浙江", child: [
-      PickerItem("杭州"),
-      PickerItem("宁波"),
-      PickerItem("温州"),
-      PickerItem("嘉兴"),
-      PickerItem("湖州"),
+    PickerItem("Zhejiang", child: [
+      PickerItem("Hangzhou"),
+      PickerItem("Ningbo"),
+      PickerItem("Wenzhou"),
+      PickerItem("Jiaxing"),
+      PickerItem("Huzhou"),
     ]),
-    PickerItem("福建", child: [
-      PickerItem("福州"),
-      PickerItem("厦门"),
-      PickerItem("莆田"),
-      PickerItem("三明"),
+    PickerItem("Fujian Province", child: [
+      PickerItem("Fuzhou"),
+      PickerItem("Xiamen"),
+      PickerItem("Putian"),
+      PickerItem("Sanming"),
       // PickerItem("泉州"),
     ]),
   ];
@@ -49,24 +49,24 @@ class _DemoPicker extends State<DemoPicker> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          title("基础用法"),
+          title("Basic usage"),
           Picker(colums: options),
-          title("默认选中项"),
+          title("Selected by default"),
           Picker(colums: options, defaultIndex: 2),
-          title("展示顶部栏"),
+          title("Show top bar"),
           Picker(
               colums: options,
               showToolbar: true,
-              title: "标题",
+              title: "Title",
               onCancel: (values, index) {
-                Utils.toast("取消");
+                Utils.toast("cancel");
               },
               onConfirm: (values, index) {
-                Utils.toast("确认，选项为 $values, $index");
+                Utils.toast("confirm the options are $values, $index");
               }),
-          title("搭配弹出层使用"),
+          title("Use with pop-up layer"),
           Cell(
-            title: "城市",
+            title: "City",
             isLink: true,
             value: _city,
             onClick: () {
@@ -91,20 +91,20 @@ class _DemoPicker extends State<DemoPicker> {
                   });
             },
           ),
-          title("多列联动"),
+          title("Multi-column linkage"),
           Picker(
               colums: options1,
               level: 2,
               defaultIndex: [0, 2],
               showToolbar: true,
-              title: "标题",
+              title: "Title",
               onCancel: (values, index) {
-                Utils.toast("取消");
+                Utils.toast("cancel");
               },
               onConfirm: (values, index) {
-                Utils.toast("确认，选项为 $values, $index");
+                Utils.toast("Confirm, the options are $values, $index");
               }),
-          title("加载状态"),
+          title("Loading state"),
           Picker(colums: options1, level: 2, showToolbar: true, loading: true),
         ],
       ),

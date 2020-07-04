@@ -8,8 +8,8 @@ class DemoRadio extends StatefulWidget {
 
 class _DemoRadio extends State<DemoRadio> {
   List<RadioItem> list = [
-    RadioItem(name: "a", text: "单选框1"),
-    RadioItem(name: "b", text: "单选框2"),
+    RadioItem(name: "a", text: "Radio box 1"),
+    RadioItem(name: "b", text: "Radio box 2"),
   ];
 
   Widget title(String title) {
@@ -25,22 +25,22 @@ class _DemoRadio extends State<DemoRadio> {
         child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        title("基础用法"),
+        title("Basic usage"),
         RadioGroup(
           value: 'a',
           list: list,
         ),
-        title("禁用状态"),
+        title("Disabled"),
         RadioGroup(list: list, value: 'a', disabled: true),
-        title("自定义颜色"),
+        title("Custom colors"),
         RadioGroup(list: list, value: 'a', checkedColor: Colors.green),
-        title("自定义形状"),
+        title("Custom shape"),
         RadioGroup(
           list: list,
           value: 'a',
           shape: 'square',
         ),
-        title("搭配单元格组件使用"),
+        title("Use with cell components"),
         RadioGroup(
           list: list,
           value: 'a',

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../utils/index.dart';
 import 'package:flutter_vant_kit/main.dart';
+
+import '../utils/index.dart';
 
 class DemoImageWall extends StatefulWidget {
   @override
@@ -27,7 +28,7 @@ class _DemoImageWall extends State<DemoImageWall> {
         child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        title("基础用法"),
+        title("Basic usage"),
         ImageWall(
           images: images,
           count: 6,
@@ -36,7 +37,7 @@ class _DemoImageWall extends State<DemoImageWall> {
           },
           onChange: (image) {},
         ),
-        title("多选图片"),
+        title("Multi-select pictures"),
         ImageWall(
           images: images,
           count: 6,
@@ -46,14 +47,14 @@ class _DemoImageWall extends State<DemoImageWall> {
           },
           onChange: (image) {},
         ),
-        // title("自定义每行数量"),
+        // title("Customize the number of each line"),
         // ImageWall(
         //   images: images,
         //   length: 3,
         //   onUpload: (files) async {},
         //   onChange: (image) {},
         // ),
-        title("图片的缩放模式"),
+        title("Image zoom mode"),
         ImageWall(
           images: images,
           imageFit: BoxFit.contain,

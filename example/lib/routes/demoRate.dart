@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../utils/index.dart';
 import 'package:flutter_vant_kit/main.dart';
+
+import '../utils/index.dart';
 
 class DemoRate extends StatefulWidget {
   @override
@@ -22,11 +23,11 @@ class _DemoRate extends State<DemoRate> {
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              title("基础用法"),
+              title("Basic usage"),
               Rate(
                 value: 3,
               ),
-              title("自定义图标"),
+              title("Custom icon"),
               Rate(
                 value: 3,
                 icon: Icons.favorite,
@@ -35,7 +36,7 @@ class _DemoRate extends State<DemoRate> {
                   Utils.toast("Rate changed: $val");
                 },
               ),
-              title("自定义样式"),
+              title("Custom style"),
               Rate(
                 value: 3,
                 color: Colors.blueAccent,
@@ -46,14 +47,14 @@ class _DemoRate extends State<DemoRate> {
                   Utils.toast("Rate changed: $val");
                 },
               ),
-              title("自定义数量"),
+              title("Custom quantity"),
               Rate(
                 count: 7,
                 value: 4,
               ),
-              title("禁用状态"),
+              title("Disabled"),
               Rate(value: 3, disabled: true),
-              title("只读状态"),
+              title("Read-only status"),
               Rate(value: 3, readonly: true)
             ]));
   }

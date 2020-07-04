@@ -20,23 +20,23 @@ class _DemoPanel extends State<DemoPanel> {
       child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            title("基础用法"),
+            title("Basic usage"),
             Panel(
-                title: "标题",
-                desc: "描述信息",
-                status: "状态",
+                title: "Title",
+                desc: "Description",
+                status: "status",
                 body: Column(
                   mainAxisSize: MainAxisSize.max,
-                  children: <Widget>[Text("内容")],
+                  children: <Widget>[Text("Content")],
                 )),
-            title("高级用法"),
+            title("Advanced usage"),
             Panel(
-              title: "标题",
-              desc: "描述信息",
-              status: "状态",
+              title: "Title",
+              desc: "Description",
+              status: "status",
               body: Column(
                 mainAxisSize: MainAxisSize.max,
-                children: <Widget>[Text("内容")],
+                children: <Widget>[Text("Content")],
               ),
               footer: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -45,16 +45,14 @@ class _DemoPanel extends State<DemoPanel> {
                     padding: EdgeInsets.symmetric(vertical: 6, horizontal: 12),
                     type: "danger",
                     size: "small",
-                    width: 60,
-                    text: "确定",
+                    text: "Certain",
                     onClick: () => {},
                   ),
                   SizedBox(width: 8),
                   NButton(
                     padding: EdgeInsets.symmetric(vertical: 6, horizontal: 12),
                     size: "small",
-                    width: 60,
-                    text: "取消",
+                    text: "Cancel",
                     onClick: () => {},
                   ),
                 ],

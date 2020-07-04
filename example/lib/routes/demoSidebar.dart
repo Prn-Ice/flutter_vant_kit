@@ -52,7 +52,7 @@ class _DemoSidebar extends State<DemoSidebar> {
           Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                title("基础用法"),
+                title("Basic usage"),
                 Sidebar(
                   list: list1,
                 )

@@ -16,7 +16,7 @@ class _DemoBadge extends State<DemoBadge> {
 
   Widget testButton() {
     return NButton(
-      text: "按钮",
+      text: "push button",
       type: "primary",
       onClick: () {},
     );
@@ -28,29 +28,29 @@ class _DemoBadge extends State<DemoBadge> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          title("数字"),
+          title("Digit"),
           Row(children: <Widget>[
             Badge(
               value: "10",
               child: testButton(),
             ),
           ]),
-          title("红点"),
+          title("Red dot"),
           Row(children: <Widget>[
             Badge(child: testButton(), dot: true),
           ]),
-          title("文本"),
+          title("Version"),
           Row(children: <Widget>[
             Badge(
               child: testButton(),
               value: "NEW",
             ),
           ]),
-          title("自定义样式"),
+          title("Custom style"),
           Row(
             children: <Widget>[
               Badge(
-                value: "自定义",
+                value: "Customize",
                 color: Colors.purpleAccent,
                 child: testButton(),
               ),
@@ -58,7 +58,7 @@ class _DemoBadge extends State<DemoBadge> {
                 width: 25,
               ),
               Badge(
-                value: "自定义",
+                value: "Customize",
                 color: Colors.greenAccent,
                 textColor: Colors.green,
                 textSize: 16,

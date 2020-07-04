@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
-import '../utils/index.dart';
 import 'package:flutter_vant_kit/main.dart';
+import 'package:intl/intl.dart';
+
+import '../utils/index.dart';
 
 class DemoCalendar extends StatefulWidget {
   @override
@@ -38,11 +39,11 @@ class _DemoCalendar extends State<DemoCalendar> {
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-          title("基础用法"),
+          title("Basic usage"),
           CellGroup(
             children: <Widget>[
               Cell(
-                title: "选择单个日期",
+                title: "Select A Single Date",
                 value: _selectedDate1 != null
                     ? formatDateWithYear(_selectedDate1)
                     : '',
@@ -50,15 +51,15 @@ class _DemoCalendar extends State<DemoCalendar> {
                 onClick: () => Calendar(
                   defaultDate: _selectedDate1,
                   maxDate: DateTime.now().add(Duration(days: 40)),
-                  onConfirm: (date) {
+                  onConfirm: (dynamic date) {
                     setState(() {
-                      _selectedDate1 = date;
+                      _selectedDate1 = date as DateTime;
                     });
                   },
                 ).show(context),
               ),
               Cell(
-                title: "选择日期区间",
+                title: "Select date range",
                 value: _selectedDate2 != null
                     ? "${formatDateWithMonth(_selectedDate2[0])} - ${formatDateWithMonth(_selectedDate2[1])}"
                     : '',
@@ -66,20 +67,20 @@ class _DemoCalendar extends State<DemoCalendar> {
                 onClick: () => Calendar(
                   type: "range",
                   defaultDate: _selectedDate2,
-                  onConfirm: (date) {
+                  onConfirm: (dynamic date) {
                     setState(() {
-                      _selectedDate2 = date;
+                      _selectedDate2 = date as List<DateTime>;
                     });
                   },
                 ).show(context),
               ),
             ],
           ),
-          title("快捷选择"),
+          title("Quick selection"),
           CellGroup(
             children: <Widget>[
               Cell(
-                title: "选择单个日期",
+                title: "Select a single date",
                 value: _selectedDate3 != null
                     ? formatDateWithYear(_selectedDate3)
                     : '',
@@ -87,15 +88,15 @@ class _DemoCalendar extends State<DemoCalendar> {
                 onClick: () => Calendar(
                   showConfirm: false,
                   defaultDate: _selectedDate3,
-                  onConfirm: (date) {
+                  onConfirm: (dynamic date) {
                     setState(() {
-                      _selectedDate3 = date;
+                      _selectedDate3 = date as DateTime;
                     });
                   },
                 ).show(context),
               ),
               Cell(
-                title: "选择日期区间",
+                title: "Select date range",
                 value: _selectedDate4 != null
                     ? "${formatDateWithMonth(_selectedDate4[0])} - ${formatDateWithMonth(_selectedDate4[1])}"
                     : '',
@@ -104,20 +105,20 @@ class _DemoCalendar extends State<DemoCalendar> {
                   type: "range",
                   showConfirm: false,
                   defaultDate: _selectedDate4,
-                  onConfirm: (date) {
+                  onConfirm: (dynamic date) {
                     setState(() {
-                      _selectedDate4 = date;
+                      _selectedDate4 = date as List<DateTime>;
                     });
                   },
                 ).show(context),
               ),
             ],
           ),
-          title("自定义日历"),
+          title("Custom calendar"),
           CellGroup(
             children: <Widget>[
               Cell(
-                title: "自定义颜色",
+                title: "Custom colors",
                 isLink: true,
                 value: _selectedDate5 != null
                     ? "${DateFormat('MM/dd').format(_selectedDate5[0])} - ${DateFormat('MM/dd').format(_selectedDate5[1])}"
@@ -126,15 +127,15 @@ class _DemoCalendar extends State<DemoCalendar> {
                   color: Colors.green,
                   type: "range",
                   defaultDate: _selectedDate5,
-                  onConfirm: (date) {
+                  onConfirm: (dynamic date) {
                     setState(() {
-                      _selectedDate5 = date;
+                      _selectedDate5 = date as List<DateTime>;
                     });
                   },
                 ).show(context),
               ),
               Cell(
-                title: "自定义日期范围",
+                title: "Custom date range",
                 isLink: true,
                 value: _selectedDate6 != null
                     ? formatDateWithYear(_selectedDate6)
@@ -143,36 +144,36 @@ class _DemoCalendar extends State<DemoCalendar> {
                   defaultDate: _selectedDate6,
                   minDate: DateFormat('yyyy-MM-dd').parse("2010-01-01"),
                   maxDate: DateFormat('yyyy-MM-dd').parse("2010-01-31"),
-                  onConfirm: (date) {
+                  onConfirm: (dynamic date) {
                     setState(() {
-                      _selectedDate6 = date;
+                      _selectedDate6 = date as DateTime;
                     });
                   },
                 ).show(context),
               ),
               Cell(
-                title: "自定义按钮文字",
+                title: "Custom button text",
                 isLink: true,
                 value: _selectedDate7 != null
                     ? formatDateWithYear(_selectedDate7)
                     : '',
                 onClick: () => Calendar(
-                  confirmText: "完成",
+                  confirmText: "complete",
                   defaultDate: _selectedDate7,
-                  onConfirm: (date) {
+                  onConfirm: (dynamic date) {
                     setState(() {
-                      _selectedDate7 = date;
+                      _selectedDate7 = date as DateTime;
                     });
                   },
                 ).show(context),
               ),
             ],
           ),
-          title("平铺展示"),
+          title("Tiled display"),
           Calendar(
             poppable: false,
             showConfirm: false,
-            title: "日历",
+            title: "Calendar",
             type: "range",
             defaultDate: [
               DateFormat('yyyy-MM-dd').parse("2012-11-10"),
@@ -182,10 +183,10 @@ class _DemoCalendar extends State<DemoCalendar> {
             maxDate: DateFormat('yyyy-MM-dd')
                 .parse("2012-11-10")
                 .add(Duration(days: 120)),
-            onSelect: (date) {
+            onSelect: (dynamic date) {
               Utils.toast(date.toString());
             },
-          ).show(context),
+          ).show(context) as Widget,
         ]));
   }
 }

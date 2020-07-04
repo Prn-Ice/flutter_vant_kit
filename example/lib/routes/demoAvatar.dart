@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../utils/index.dart';
 import 'package:flutter_vant_kit/main.dart';
+
+import '../utils/index.dart';
 
 class DemoAvatar extends StatefulWidget {
   @override
@@ -21,7 +22,7 @@ class _DemoAvatar extends State<DemoAvatar> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          title("基本用法"),
+          title("Basic usage"),
           Wrap(
             spacing: 12,
             crossAxisAlignment: WrapCrossAlignment.center,
@@ -31,7 +32,7 @@ class _DemoAvatar extends State<DemoAvatar> {
               Avatar(type: 'small'),
             ],
           ),
-          title("形状类型"),
+          title("Shape type"),
           Wrap(
             spacing: 12,
             crossAxisAlignment: WrapCrossAlignment.center,
@@ -41,9 +42,9 @@ class _DemoAvatar extends State<DemoAvatar> {
               Avatar(type: 'small', shape: "square"),
             ],
           ),
-          title("修改颜色"),
+          title("Modify color"),
           Avatar(color: Colors.blueAccent, iconColor: Colors.white),
-          title("自定义内容"),
+          title("Custom content"),
           Wrap(
             spacing: 12,
             crossAxisAlignment: WrapCrossAlignment.center,
@@ -59,7 +60,7 @@ class _DemoAvatar extends State<DemoAvatar> {
               ),
             ],
           ),
-          title("点击触发事件"),
+          title("Click trigger event"),
           Avatar(
             onClick: () {
               Utils.toast("Clicked!");

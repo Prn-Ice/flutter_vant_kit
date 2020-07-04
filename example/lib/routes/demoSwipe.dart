@@ -37,7 +37,7 @@ class _DemoSwipe extends State<DemoSwipe> {
   @override
   Widget build(BuildContext context) {
     return ListView(children: <Widget>[
-      title("基础用法"),
+      title("Basic usage"),
       Container(
           height: 220.0,
           child: Swipe(

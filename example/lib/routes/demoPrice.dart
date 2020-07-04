@@ -20,7 +20,7 @@ class _DemoPrice extends State<DemoPrice> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          title("基础用法"),
+          title("Basic usage"),
           Price(
             value: 1234.567,
           ),

@@ -29,13 +29,13 @@ class _DemoImage extends State<DemoImage> {
         child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        title("基础用法"),
+        title("Basic usage"),
         Wrap(direction: Axis.horizontal, spacing: 20, children: <Widget>[
           Image.asset("imgs/avatar.png", width: 100, height: 100),
           Image.network("https://img.yzcdn.cn/vant/cat.jpeg",
               width: 100, height: 100)
         ]),
-        title("填充模式"),
+        title("Fill mode"),
         Wrap(
             direction: Axis.horizontal,
             spacing: 12,
@@ -63,7 +63,7 @@ class _DemoImage extends State<DemoImage> {
                   "scale-down"),
               SizedBox(width: 10),
             ]),
-        title("带加载提示的图片"),
+        title("Image with loading prompt"),
         Wrap(
           direction: Axis.horizontal,
           spacing: 20,
