@@ -49,7 +49,7 @@ class _DemoSwipe extends State<DemoSwipe> {
               Image.network("https://img.yzcdn.cn/vant/apple-4.jpg")
             ],
           )),
-      title("监听 change 事件"),
+      title("Monitor change Event"),
       Container(
           height: 220.0,
           child: Swipe(
@@ -60,7 +60,7 @@ class _DemoSwipe extends State<DemoSwipe> {
             //   Utils.toast(val);
             // },
           )),
-      title("纵向滚动"),
+      title("Vertical scroll"),
       Container(
           height: 220.0,
           child: Swipe(
@@ -69,7 +69,7 @@ class _DemoSwipe extends State<DemoSwipe> {
             indicatorColor: Colors.white,
             children: buildItem(4),
           )),
-      title("自定义动画"),
+      title("Custom animation"),
       Container(
           height: 220.0,
           child: Swipe(
@@ -80,7 +80,7 @@ class _DemoSwipe extends State<DemoSwipe> {
             duration: Duration(seconds: 3),
             children: buildItem(4),
           )),
-      title("设置滑块占比"),
+      title("Set slider ratio"),
       Container(
           height: 220.0,
           child: Swipe(
@@ -93,7 +93,7 @@ class _DemoSwipe extends State<DemoSwipe> {
               Image.network("https://img.yzcdn.cn/vant/apple-4.jpg")
             ],
           )),
-      title("自定义指示器"),
+      title("Custom indicator"),
       Container(
           height: 220.0,
           child: Swipe(

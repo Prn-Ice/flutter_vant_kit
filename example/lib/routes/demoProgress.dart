@@ -22,30 +22,30 @@ class _DemoProgress extends State<DemoProgress> {
         children: <Widget>[
           title("Basic usage"),
           Progress(percentage: 50, showPivot: true),
-          title("线条粗细"),
+          title("Line thickness"),
           Progress(percentage: 50, strokeWidth: 8, showPivot: true),
-          title("置灰"),
+          title("Put gray"),
           Progress(percentage: 50, inactive: true, showPivot: true),
-          title("样式定制"),
+          title("Style customization"),
           Column(
             children: <Widget>[
               Progress(
                   percentage: 30,
                   color: Colors.orangeAccent,
                   pivotColor: Colors.orangeAccent,
-                  pivotText: "橙色",
+                  pivotText: "Orange",
                   showPivot: true),
               Progress(
                   percentage: 50,
                   color: Colors.redAccent,
                   pivotColor: Colors.redAccent,
-                  pivotText: "红色",
+                  pivotText: "Revolutionary",
                   showPivot: true),
               Progress(
                   percentage: 70,
                   color: Colors.purple,
                   pivotColor: Colors.purple,
-                  pivotText: "紫色",
+                  pivotText: "Purple",
                   showPivot: true)
             ],
           ),

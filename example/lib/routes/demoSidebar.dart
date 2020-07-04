@@ -20,16 +20,16 @@ class _DemoSidebar extends State<DemoSidebar> {
   @override
   Widget build(BuildContext context) {
     List<SideBarItem> list1 = [
-      SideBarItem(title: "标签名"),
-      SideBarItem(title: "标签名"),
-      SideBarItem(title: "标签名"),
+      SideBarItem(title: "Tag name"),
+      SideBarItem(title: "Tag name"),
+      SideBarItem(title: "Tag name"),
     ];
 
     List<SideBarItem> list2 = [
-      SideBarItem(title: "标签名", dot: true),
-      SideBarItem(title: "标签名", info: "5"),
+      SideBarItem(title: "Tag name", dot: true),
+      SideBarItem(title: "Tag name", info: "5"),
       SideBarItem(
-          title: "标签名",
+          title: "Tag name",
           info: _status,
           onClick: (val) {
             setState(() {
@@ -40,9 +40,9 @@ class _DemoSidebar extends State<DemoSidebar> {
     ];
 
     List<SideBarItem> list3 = [
-      SideBarItem(title: "标签名"),
-      SideBarItem(title: "标签名", disabled: true),
-      SideBarItem(title: "标签名"),
+      SideBarItem(title: "Tag name"),
+      SideBarItem(title: "Tag name", disabled: true),
+      SideBarItem(title: "Tag name"),
     ];
     return SingleChildScrollView(
       child: Wrap(
@@ -60,7 +60,7 @@ class _DemoSidebar extends State<DemoSidebar> {
           Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                title("提示信息"),
+                title("Prompt message"),
                 Sidebar(
                   active: _active,
                   list: list2,
@@ -69,7 +69,7 @@ class _DemoSidebar extends State<DemoSidebar> {
           Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                title("禁用选项"),
+                title("Disable option"),
                 Sidebar(
                   list: list3,
                 )

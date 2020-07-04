@@ -35,5 +35,5 @@ NCard(
 | customOriginPrice | 自定义商品原价 | `Widget` | - |
 | customThumb | 自定义图片 | `Widget` | - |
 | customTag | 自定义图片角标 | `Widget` | - |
-| customTags | 自定义描述下方标签区域 | `Widget` | - |
+| customTags | 自定义描述下方Tag区域 | `Widget` | - |
 | customFooter | 自定义 footer | `Widget` | - |

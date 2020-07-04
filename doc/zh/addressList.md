@@ -43,7 +43,7 @@ AddressList(
 | disabledText | 不可配送提示文案 | `String` | `以下地址超出配送范围` |
 | switchable | 是否允许切换地址 | `bool` | `true` |
 | addButtonText | 底部按钮文字 | `String` | `新增地址` |
-| defaultTagText | 默认地址标签文字 | `String` | `默认` |
+| defaultTagText | 默认地址Tag文字 | `String` | `默认` |
 | onAdd | 点击新增按钮时触发 | `Function()` | - |
 | onEdit | 点击编辑按钮时触发 | `Function(AddressInfo info, int i)` | - |
 | onSelect | 切换选中的地址时触发 | `Function(AddressInfo info, int i)` | - |

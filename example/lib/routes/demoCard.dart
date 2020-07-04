@@ -24,18 +24,18 @@ class _DemoCard extends State<DemoCard> {
             children: <Widget>[
           title("Basic usage"),
           NCard(
-              title: "商品名称",
-              desc: "描述信息",
+              title: "product name",
+              desc: "Description",
               num: 2,
               price: 2.00,
               image: Image.network("https://img.yzcdn.cn/vant/t-thirt.jpg")),
-          title("营销信息"),
+          title("Marketing information"),
           NCard(
-            title: "商品名称",
-            desc: "描述信息",
+            title: "product name",
+            desc: "Description",
             num: 2,
             price: 2.00,
-            tag: "标签",
+            tag: "Tag",
             originPrice: 10.00,
             image: Image.network("https://img.yzcdn.cn/vant/t-thirt.jpg"),
             onClick: () {
@@ -44,9 +44,9 @@ class _DemoCard extends State<DemoCard> {
           ),
           title("Custom content"),
           NCard(
-            customTitle: Text("商品名称",
+            customTitle: Text("product name",
                 style: TextStyle(fontSize: 16, color: Colors.blueAccent)),
-            desc: "描述信息",
+            desc: "Description",
             num: 2,
             customPrice: Price(
               value: 2.0,
@@ -55,8 +55,8 @@ class _DemoCard extends State<DemoCard> {
             image: Image.network("https://img.yzcdn.cn/vant/t-thirt.jpg"),
             customTags: Row(
               children: <Widget>[
-                Tag(text: "标签", plain: true),
-                Tag(text: "标签", plain: true)
+                Tag(text: "Tag", plain: true),
+                Tag(text: "Tag", plain: true)
               ],
             ),
             customFooter: Padding(
@@ -65,14 +65,14 @@ class _DemoCard extends State<DemoCard> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   NButton(
-                    text: "按钮",
+                    text: "push button",
                     round: true,
                     size: "mini",
                     padding: EdgeInsets.symmetric(vertical: 3, horizontal: 12),
                   ),
                   SizedBox(width: 6),
                   NButton(
-                    text: "按钮",
+                    text: "push button",
                     round: true,
                     size: "mini",
                     padding: EdgeInsets.symmetric(vertical: 3, horizontal: 12),

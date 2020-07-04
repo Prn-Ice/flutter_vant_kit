@@ -2,11 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_vant_kit/theme/style.dart';
-import 'package:flutter_vant_kit/widgets/cellGroup.dart';
-import 'package:flutter_vant_kit/widgets/field.dart';
-import 'package:flutter_vant_kit/widgets/cell.dart';
 import 'package:flutter_vant_kit/widgets/button.dart';
+import 'package:flutter_vant_kit/widgets/cell.dart';
+import 'package:flutter_vant_kit/widgets/cellGroup.dart';
 import 'package:flutter_vant_kit/widgets/dialog.dart';
+import 'package:flutter_vant_kit/widgets/field.dart';
 import 'package:flutter_vant_kit/widgets/picker.dart';
 
 class AddressEdit extends StatefulWidget {
@@ -39,12 +39,12 @@ class AddressEdit extends StatefulWidget {
 
   AddressEdit(
       {Key key,
-      this.areaColumnsPlaceholder: "选择省 / 市 / 区",
+      this.areaColumnsPlaceholder: "Choose province / City / District",
       this.showPostal: true,
       this.showDelete: false,
       this.showSetDefault: false,
-      this.saveButtonText: "保存",
-      this.deleteButtonText: "删除",
+      this.saveButtonText: "Save",
+      this.deleteButtonText: "Delete",
       this.detailRows: 1,
       this.detailMaxlength: 200,
       this.addressInfo,

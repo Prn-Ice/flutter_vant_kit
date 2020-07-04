@@ -13,15 +13,15 @@ class _DemoCoupon extends State<DemoCoupon> {
 
   List<CoupenItem> coupons = List.generate(10, (i) {
     return CoupenItem(
-        condition: '无使用门槛\n最多优惠12元',
-        description: '描述信息',
-        reason: '优惠券不可用原因',
+        condition: 'No usage threshold\nUp to 12 yuan discount',
+        description: 'Description',
+        reason: 'Coupons are not available',
         value: 150,
-        name: '优惠券名称',
+        name: 'Coupon name',
         startAt: DateFormat("yyyy-MM-dd").format(DateTime.parse("20170310")),
         endAt: DateFormat("yyyy-MM-dd").format(DateTime.parse("20171210")),
         valueDesc: i % 2 == 0 ? '8.5' : '1.5',
-        unitDesc: i % 2 == 0 ? '折' : '元');
+        unitDesc: i % 2 == 0 ? 'fold' : 'yuan');
   });
 
   Widget title(String title) {
@@ -39,8 +39,8 @@ class _DemoCoupon extends State<DemoCoupon> {
       children: <Widget>[
         title("Basic usage"),
         Cell(
-          title: "优惠券",
-          value: _discount ?? "${coupons.length}张可用",
+          title: "Coupon",
+          value: _discount ?? "${coupons.length}Available",
           isLink: true,
           onClick: () {
             Coupon(

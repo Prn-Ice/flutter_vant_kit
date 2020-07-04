@@ -6,7 +6,7 @@ class Tag extends StatefulWidget {
   final String type;
   // 大小
   final String size;
-  // 标签内文字
+  // Tag内文字
   final String text;
   // 是否为空心样式
   final bool plain;
@@ -14,11 +14,11 @@ class Tag extends StatefulWidget {
   final bool round;
   // 是否为标记样式
   final bool mark;
-  // 标签颜色
+  // Tag颜色
   final Color color;
   // 文字颜色，优先于color属性
   final Color textColor;
-  // 是否为可关闭标签
+  // 是否为可关闭Tag
   final Function() onClose;
 
   Tag({

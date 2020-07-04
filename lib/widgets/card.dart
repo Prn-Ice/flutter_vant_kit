@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vant_kit/theme/style.dart';
-import 'package:flutter_vant_kit/widgets/tag.dart';
 import 'package:flutter_vant_kit/widgets/price.dart';
+import 'package:flutter_vant_kit/widgets/tag.dart';
 
 class NCard extends StatelessWidget {
   // 左侧图片
@@ -38,7 +38,7 @@ class NCard extends StatelessWidget {
   final Widget customThumb;
   // 自定义图片角标
   final Widget customTag;
-  // 自定义描述下方标签区域
+  // 自定义描述下方Tag区域
   final Widget customTags;
   // 自定义 footer
   final Widget customFooter;

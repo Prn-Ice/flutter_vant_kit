@@ -7,10 +7,10 @@ import 'package:flutter_vant_kit/main.dart';
 
 List<SideBarItem> list = [
   SideBarItem(
-    title: "标签名"
+    title: "Tag name"
   ),
   SideBarItem(
-    title: "标签名"
+    title: "Tag name"
   ),
   ...
 ];

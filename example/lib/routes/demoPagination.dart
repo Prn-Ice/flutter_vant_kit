@@ -24,7 +24,7 @@ class _DemoPagination extends State<DemoPagination> {
         Pagination(
           totalItems: 36,
         ),
-        title("简单模式"),
+        title("Simple mode"),
         Pagination(
           totalItems: 120,
           mode: 'simple',

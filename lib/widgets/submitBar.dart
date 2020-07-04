@@ -4,41 +4,41 @@ import 'package:flutter_vant_kit/widgets/button.dart';
 import 'package:flutter_vant_kit/widgets/price.dart';
 
 class SubmitBar extends StatelessWidget {
-  // 价格
+  /// Price
   final double price;
-  // 价格左侧文案
+  /// Price left copy
   final String label;
-  // 价格右侧文案
+  /// Copy right
   final String suffixLabel;
-  // 价格文案对齐方向
+  /// Price copy alignment
   final String textAlign;
-  // 按钮文字
+  /// Button text
   final String buttonText;
-  // 提示文案
+  /// Cue copy
   final String tip;
-  // 左侧图标
+  /// Left icon
   final IconData tipIcon;
-  // 是否禁用按钮
+  /// Whether to disable the button
   final bool disabled;
-  // 是否加载中
+  /// Is loading
   final bool loading;
-  // 货币符号
+  /// currency symbol
   final String currency;
-  // 价格小数点后位数
+  /// Price decimal place
   final int decimalLength;
-  // 按钮点击事件回调
+  /// Button click event callback
   final Function() onSubmit;
-  // 提示文案中的额外操作和说明
+  /// Tips for additional operations and instructions in copy
   final Widget customTip;
-  // 自定义订单栏上方内容
+  /// Customize the content above the order bar
   final Widget customTop;
-  // 自定义订单栏左侧内容
+  /// Customize the left side of the order bar
   final Widget customLeft;
 
   const SubmitBar(
       {Key key,
       this.price,
-      this.label: "合计：",
+      this.label: "total:",
       this.suffixLabel,
       this.textAlign: "right",
       this.buttonText,
@@ -118,8 +118,8 @@ class SubmitBar extends StatelessWidget {
             text: loading ? "" : buttonText,
             round: true,
             color: Style.submitBarButtonColor,
-            width: Style.submitBarButtonWidth,
-            height: Style.submitBarButtonHeight,
+            /*width: Style.submitBarButtonWidth,
+            height: Style.submitBarButtonHeight,*/
             loading: loading,
             disabled: disabled,
             onClick: () {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../utils/index.dart';
 import 'package:flutter_vant_kit/main.dart';
+
+import '../utils/index.dart';
 
 class DemoAddressList extends StatefulWidget {
   @override
@@ -19,32 +20,32 @@ class _DemoAddressList extends State<DemoAddressList> {
   Widget build(BuildContext context) {
     List<AddressInfo> list = [
       AddressInfo(
-          name: "张三",
-          tel: "18345234123",
-          province: "广东省",
-          city: "深圳市",
-          county: "南山区",
-          addressDetail: "明珠花园",
+          name: "Zhang San",
+          tel: "234123",
+          province: "Guangdong Province",
+          city: "Shenzhen",
+          county: "Minamiyama Ward",
+          addressDetail: "Pearl Garden",
           postalCode: "515000",
           isDefault: true),
       AddressInfo(
-          name: "李四",
+          name: "Li Si",
           tel: "18345234123",
-          province: "广东省",
-          city: "深圳市",
-          county: "南山区",
-          addressDetail: "白石街道明珠花园",
+          province: "Guangdong Province",
+          city: "Shenzhen",
+          county: "Minamiyama Ward",
+          addressDetail: "Pearl Garden in Baishi Street",
           postalCode: "515000",
           isDefault: false),
     ];
     List<AddressInfo> disabledList = [
       AddressInfo(
-          name: "王五",
+          name: "Wang Wu",
           tel: "18345234123",
-          province: "广东省",
-          city: "深圳市",
-          county: "南山区",
-          addressDetail: "明珠花园",
+          province: "Guangdong Province",
+          city: "Shenzhen",
+          county: "Minamiyama Ward",
+          addressDetail: "Pearl Garden",
           postalCode: "515000",
           isDefault: false)
     ];
@@ -52,7 +53,7 @@ class _DemoAddressList extends State<DemoAddressList> {
     return AddressList(
       id: 0,
       list: list,
-      top: title("基本用法"),
+      top: title("Basic usage"),
       disabledList: disabledList,
       onSelect: (item, i) {
         Utils.toast(item.toString());

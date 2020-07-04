@@ -1,40 +1,55 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vant_kit/theme/style.dart';
-import 'package:flutter_vant_kit/widgets/field.dart';
 import 'package:flutter_vant_kit/widgets/button.dart';
+import 'package:flutter_vant_kit/widgets/field.dart';
 
 class Coupon {
-  // 当前选中优惠券的索引
+  /// Index of currently selected coupon
   final int chosenCoupon;
-  // 可用优惠券列表
+
+  /// List of available coupons
   final List<CoupenItem> coupons;
-  // 不可用优惠券列表
+
+  /// List of unavailable coupons
   final List<CoupenItem> disabledCoupons;
-  // 可用优惠券列表标题
+
+  /// Available coupon list title
   final String enabledTitle;
-  // 不可用优惠券列表标题
+
+  /// Unavailable coupon list title
   final String disabledTitle;
-  // 兑换按钮文字
+
+  /// Redeem button text
   final String exchangeButtonText;
-  // 是否禁用兑换按钮
+
+  /// Whether to disable the redemption button
   final bool exchangeButtonDisabled;
-  // 兑换码最大长度
+
+  /// Maximum length of redemption code
   final int exchangeMaxLength;
-  // 滚动至特定优惠券位置
+
+  /// Scroll to a specific coupon location
   final int displayedCouponIndex;
-  // 是否显示列表底部按钮
+
+  /// Whether to display the button at the bottom of the list
   final bool showCloseButton;
-  // 列表底部按钮文字
+
+  /// Button text at the bottom of the list
   final String closeButtonText;
-  // 输入框文字提示
+
+  /// Text box
   final String inputPlaceholder;
-  // 是否展示兑换栏
+
+  /// Whether to display the exchange bar
   final bool showExchangeBar;
-  // 列表为空时的占位图
+
+  /// Placeholder when the list is empty
   final Image emptyImage;
-  // 优惠券切换回调
+
+  /// Coupon switch callback
   final Function(int val) onSelect;
-  // 兑换优惠券回调
+
+  /// Redeem Coupon Callback
   final Function(String val) onExchange;
 
   Coupon({
@@ -42,15 +57,15 @@ class Coupon {
     this.chosenCoupon,
     this.coupons,
     this.disabledCoupons,
-    this.enabledTitle: "可使用优惠券",
-    this.disabledTitle: "不可使用优惠券",
-    this.exchangeButtonText: "兑换",
+    this.enabledTitle: "Coupons available",
+    this.disabledTitle: "Coupons cannot be used",
+    this.exchangeButtonText: "Convert",
     this.exchangeButtonDisabled: false,
     this.exchangeMaxLength: 10,
     this.displayedCouponIndex,
     this.showCloseButton: true,
-    this.closeButtonText: "不使用优惠",
-    this.inputPlaceholder: "请输入优惠码",
+    this.closeButtonText: "No discount",
+    this.inputPlaceholder: "Please enter the promo code",
     this.showExchangeBar: true,
     this.emptyImage,
     this.onSelect,
@@ -149,7 +164,7 @@ class _CouponState extends State<CouponState>
         Image.network("https://img.yzcdn.cn/vant/coupon-empty.png",
             width: Style.couponListEmptyImageSize),
         SizedBox(width: Style.paddingSm),
-        Text("暂无优惠券",
+        Text("No coupons",
             style: TextStyle(
                 color: Style.couponListEmptyTipColor,
                 fontSize: Style.couponListEmptyTipFontSize))
@@ -248,7 +263,8 @@ class _CouponState extends State<CouponState>
               ],
             ),
           ),
-          Text("有效期：${coupon.startAt ?? 'null'} - ${coupon.endAt ?? 'null'}",
+          Text(
+              "Validity period:${coupon.startAt ?? 'null'} - ${coupon.endAt ?? 'null'}",
               style: TextStyle(
                   color: Style.couponColor, fontSize: Style.couponFontSize))
         ],

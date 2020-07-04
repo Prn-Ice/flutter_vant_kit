@@ -24,10 +24,10 @@ class _DemoSteps extends State<DemoSteps> {
             children: <Widget>[
           title("Basic usage"),
           Steps(steps: [
-            StepItem("买家下单"),
-            StepItem("商家接单"),
-            StepItem("买家提货"),
-            StepItem("交易完成"),
+            StepItem("place order"),
+            StepItem("Merchant order"),
+            StepItem("pickup"),
+            StepItem("complete"),
           ], active: _active),
           Padding(
               padding: EdgeInsets.all(20),
@@ -35,7 +35,7 @@ class _DemoSteps extends State<DemoSteps> {
                 runSpacing: 10,
                 children: <Widget>[
                   NButton(
-                    text: "上一步",
+                    text: "Previous",
                     type: "primary",
                     plain: true,
                     onClick: () {
@@ -47,7 +47,7 @@ class _DemoSteps extends State<DemoSteps> {
                   ),
                   SizedBox(width: 6),
                   NButton(
-                    text: "下一步",
+                    text: "Next step",
                     type: "primary",
                     plain: true,
                     onClick: () {
@@ -62,10 +62,10 @@ class _DemoSteps extends State<DemoSteps> {
           title("Custom style"),
           Steps(
             steps: [
-              StepItem("买家下单"),
-              StepItem("商家接单"),
-              StepItem("买家提货"),
-              StepItem("交易完成"),
+              StepItem("place order"),
+              StepItem("Merchant order"),
+              StepItem("pickup"),
+              StepItem("complete"),
             ],
             active: _active,
             activeIcon: Icons.done,
@@ -75,10 +75,10 @@ class _DemoSteps extends State<DemoSteps> {
           title("竖向步骤条"),
           Steps(
             steps: [
-              StepItem("【城市】物流状态1", "2016-07-12 12:40"),
-              StepItem("【城市】物流状态2", "2016-07-12 12:40"),
-              StepItem("【城市】物流状态3", "2016-07-12 12:40"),
-              StepItem("【城市】快件已发货", "2016-07-12 12:40"),
+              StepItem("[City] Logistics Status 1", "2016-07-12 12:40"),
+              StepItem("[City] Logistics Status 2", "2016-07-12 12:40"),
+              StepItem("[City] Logistics Status 3", "2016-07-12 12:40"),
+              StepItem("[City] Express has been shipped", "2016-07-12 12:40"),
             ],
             active: _active,
             direction: 'vertical',

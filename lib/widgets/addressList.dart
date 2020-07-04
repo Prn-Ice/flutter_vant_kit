@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vant_kit/theme/style.dart';
-import 'package:flutter_vant_kit/widgets/tag.dart';
 import 'package:flutter_vant_kit/widgets/button.dart';
+import 'package:flutter_vant_kit/widgets/tag.dart';
 
 class AddressList extends StatefulWidget {
   // 当前选中地址的 id
@@ -16,7 +16,7 @@ class AddressList extends StatefulWidget {
   final bool switchable;
   // 底部按钮文字
   final String addButtonText;
-  // 默认地址标签文字
+  // 默认地址Tag文字
   final String defaultTagText;
   // 点击新增按钮时触发
   final Function() onAdd;

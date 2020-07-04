@@ -25,136 +25,136 @@ class _DemoTag extends State<DemoTag> {
         title("Basic usage"),
         Row(
           children: <Widget>[
-            Tag(text: "标签"),
-            Tag(type: "primary", text: "标签"),
-            Tag(type: "success", text: "标签"),
-            Tag(type: "danger", text: "标签"),
-            Tag(type: "warning", text: "标签"),
+            Tag(text: "Tag"),
+            Tag(type: "primary", text: "Tag"),
+            Tag(type: "success", text: "Tag"),
+            Tag(type: "danger", text: "Tag"),
+            Tag(type: "warning", text: "Tag"),
           ],
         ),
-        title("圆角样式"),
+        title("Rounded corner style"),
         Row(
           children: <Widget>[
             Tag(
-              text: "标签",
+              text: "Tag",
               round: true,
             ),
             Tag(
               type: "primary",
-              text: "标签",
+              text: "Tag",
               round: true,
             ),
             Tag(
               type: "success",
-              text: "标签",
+              text: "Tag",
               round: true,
             ),
             Tag(
               type: "danger",
-              text: "标签",
+              text: "Tag",
               round: true,
             ),
             Tag(
               type: "warning",
-              text: "标签",
+              text: "Tag",
               round: true,
             ),
           ],
         ),
-        title("标记样式"),
+        title("Mark style"),
         Row(
           children: <Widget>[
             Tag(
-              text: "标签",
+              text: "Tag",
               mark: true,
             ),
             Tag(
               type: "primary",
-              text: "标签",
+              text: "Tag",
               mark: true,
             ),
             Tag(
               type: "success",
-              text: "标签",
+              text: "Tag",
               mark: true,
             ),
             Tag(
               type: "danger",
-              text: "标签",
+              text: "Tag",
               mark: true,
             ),
             Tag(
               type: "warning",
-              text: "标签",
+              text: "Tag",
               mark: true,
             ),
           ],
         ),
-        title("空心样式"),
+        title("Hollow style"),
         Row(
           children: <Widget>[
             Tag(
-              text: "标签",
+              text: "Tag",
               plain: true,
             ),
             Tag(
               type: "primary",
-              text: "标签",
+              text: "Tag",
               plain: true,
             ),
             Tag(
               type: "success",
-              text: "标签",
+              text: "Tag",
               plain: true,
             ),
             Tag(
               type: "danger",
-              text: "标签",
+              text: "Tag",
               plain: true,
             ),
             Tag(
               type: "warning",
-              text: "标签",
+              text: "Tag",
               plain: true,
             ),
           ],
         ),
-        title("自定义颜色"),
+        title("Custom colors"),
         Row(children: <Widget>[
-          Tag(color: Colors.pinkAccent, text: "标签"),
-          Tag(color: Colors.pinkAccent, plain: true, text: "标签"),
-          Tag(color: Colors.purple, text: "标签"),
-          Tag(color: Colors.purple, plain: true, text: "标签"),
-          Tag(color: Colors.red[100], textColor: Colors.red[600], text: "标签"),
+          Tag(color: Colors.pinkAccent, text: "Tag"),
+          Tag(color: Colors.pinkAccent, plain: true, text: "Tag"),
+          Tag(color: Colors.purple, text: "Tag"),
+          Tag(color: Colors.purple, plain: true, text: "Tag"),
+          Tag(color: Colors.red[100], textColor: Colors.red[600], text: "Tag"),
         ]),
-        title("标签大小"),
+        title("Tag size"),
         Row(children: <Widget>[
           Tag(
-            text: "标签",
+            text: "Tag",
             type: "success",
           ),
           Tag(
-            text: "标签",
+            text: "Tag",
             size: "medium",
             type: "success",
           ),
           Tag(
-            text: "标签",
+            text: "Tag",
             size: "large",
             type: "success",
           ),
         ]),
-        title("可关闭标签"),
+        title("Tag can be closed"),
         Row(children: <Widget>[
           Tag(
-            text: "标签",
+            text: "Tag",
             onClose: () async {
               Utils.toast("close");
             },
           ),
           Tag(
             type: "primary",
-            text: "标签",
+            text: "Tag",
             onClose: () async {
               Utils.toast("close");
             },
@@ -163,7 +163,7 @@ class _DemoTag extends State<DemoTag> {
             plain: true,
             round: true,
             type: "primary",
-            text: "标签",
+            text: "Tag",
             onClose: () async {
               Utils.toast("close");
             },

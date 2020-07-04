@@ -23,34 +23,34 @@ class _DemoSubmitBar extends State<DemoSubmitBar> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
           title("Basic usage"),
-          SubmitBar(buttonText: "提交订单", price: 30.50),
-          title("禁用状态"),
+          SubmitBar(buttonText: "Submit orders", price: 30.50),
+          title("Disabled"),
           SubmitBar(
-            buttonText: "提交订单",
+            buttonText: "Submit orders",
             price: 30.50,
-            tip: "你的收货地址不支持同城送，我们已为你推荐快递",
+            tip: "delivery address does not support delivery",
             tipIcon: Icons.error_outline,
             disabled: true,
           ),
-          title("加载状态"),
+          title("Loading state"),
           SubmitBar(
-            buttonText: "提交订单",
+            buttonText: "Submit orders",
             price: 30.50,
             loading: true,
           ),
-          title("高级用法"),
+          title("Advanced usage"),
           SubmitBar(
-            buttonText: "提交订单",
+            buttonText: "Submit orders",
             price: 30.50,
-            tip: "你的收货地址不支持同城送，",
+            tip: "delivery address does not support delivery",
             customTip: GestureDetector(
               onTap: () {
                 Utils.toast("Clicked Tip");
               },
-              child: Text("修改地址",
+              child: Text("Change address",
                   style: TextStyle(fontSize: 12, color: Colors.blueAccent)),
             ),
-            customLeft: NCheckbox(text: "全选", value: true),
+            customLeft: NCheckbox(text: "select all", value: true),
           ),
         ]));
   }

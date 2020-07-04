@@ -29,22 +29,22 @@ class _DemoAddressEdit extends State<DemoAddressEdit> {
             showDelete: true,
             showSetDefault: true,
             addressInfo: <String, dynamic>{
-              "name": "张三",
+              "name": "Zhang San",
               "tel": "18345234123",
-              "province": "广东省",
-              "city": "深圳市",
-              "county": "南山区",
+              "province": "Guangdong Province",
+              "city": "Shenzhen",
+              "county": "Minamiyama Ward",
               "provinceId": 0,
               "cityId": 1,
               "countyId": 0,
-              "addressDetail": "明珠花园",
+              "addressDetail": "Pearl Garden",
               "postalCode": "515000",
               "isDefault": true
             },
             children: <Widget>[
               Field(
-                label: "备注",
-                placeholder: "请输入备注",
+                label: "Remarks",
+                placeholder: "Please enter a remark",
                 controller: textController,
               )
             ],

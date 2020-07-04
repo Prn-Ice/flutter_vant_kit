@@ -22,33 +22,33 @@ class _DemoTreeSelect extends State<DemoTreeSelect> {
   @override
   Widget build(BuildContext context) {
     List<SideBarItem> list1 = [
-      SideBarItem(title: "浙江", children: [
-        TreeItem(text: "杭州", id: 1),
-        TreeItem(text: "温州", id: 2),
-        TreeItem(text: "宁波", id: 3, disabled: true),
-        TreeItem(text: "义乌", id: 4),
+      SideBarItem(title: "Zhejiang", children: [
+        TreeItem(text: "Hangzhou", id: 1),
+        TreeItem(text: "Wenzhou", id: 2),
+        TreeItem(text: "Ningbo", id: 3, disabled: true),
+        TreeItem(text: "Yiwu", id: 4),
       ]),
-      SideBarItem(title: "江苏", children: [
-        TreeItem(text: "南京", id: 5),
-        TreeItem(text: "无锡", id: 6),
-        TreeItem(text: "徐州", id: 7),
-        TreeItem(text: "苏州", id: 8),
+      SideBarItem(title: "Jiangsu Province", children: [
+        TreeItem(text: "Nanjing", id: 5),
+        TreeItem(text: "Wuxi", id: 6),
+        TreeItem(text: "Xuzhou", id: 7),
+        TreeItem(text: "Suzhou", id: 8),
       ]),
-      SideBarItem(title: "福建", disabled: true, children: [
-        TreeItem(text: "泉州", id: 9),
-        TreeItem(text: "厦门", id: 10),
+      SideBarItem(title: "Fujian Province", disabled: true, children: [
+        TreeItem(text: "Quanzhou", id: 9),
+        TreeItem(text: "xiamen", id: 10),
       ]),
     ];
 
     List<SideBarItem> list2 = [
       SideBarItem(
-          title: "分组 1",
+          title: "Grouping 1",
           content: Container(
             padding: EdgeInsets.all(10.0),
             child: Image.network("https://img.yzcdn.cn/vant/cat.jpeg"),
           )),
       SideBarItem(
-          title: "分组 2",
+          title: "Grouping 2",
           content: Container(
             padding: EdgeInsets.all(10.0),
             child: Image.network("https://img.yzcdn.cn/vant/apple-1.jpg"),
@@ -57,22 +57,22 @@ class _DemoTreeSelect extends State<DemoTreeSelect> {
 
     List<SideBarItem> list3 = [
       SideBarItem(
-        title: "浙江",
+        title: "Zhejiang",
         children: [
-          TreeItem(text: "杭州", id: 1),
-          TreeItem(text: "温州", id: 2),
-          TreeItem(text: "宁波", id: 3, disabled: true),
-          TreeItem(text: "义乌", id: 4),
+          TreeItem(text: "Hangzhou", id: 1),
+          TreeItem(text: "Wenzhou", id: 2),
+          TreeItem(text: "Ningbo", id: 3, disabled: true),
+          TreeItem(text: "Yiwu", id: 4),
         ],
       ),
       SideBarItem(
-        title: "江苏",
+        title: "Jiangsu Province",
         info: _info,
         children: [
-          TreeItem(text: "南京", id: 5),
-          TreeItem(text: "无锡", id: 6),
-          TreeItem(text: "徐州", id: 7),
-          TreeItem(text: "苏州", id: 8),
+          TreeItem(text: "Nanjing", id: 5),
+          TreeItem(text: "Wuxi", id: 6),
+          TreeItem(text: "Xuzhou", id: 7),
+          TreeItem(text: "Suzhou", id: 8),
         ],
         // onClick: (val) {
         // setState(() {
@@ -89,12 +89,12 @@ class _DemoTreeSelect extends State<DemoTreeSelect> {
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              title("单选模式"),
+              title("Radio mode"),
               TreeSelect(
                 activeId: [1],
                 list: list1,
               ),
-              title("多选模式"),
+              title("Multi-select mode"),
               TreeSelect(
                 activeId: [1],
                 list: list1,
@@ -108,7 +108,7 @@ class _DemoTreeSelect extends State<DemoTreeSelect> {
                 list: list2,
                 height: 200,
               ),
-              title("提示信息"),
+              title("Prompt message"),
               TreeSelect(
                 mainActiveIndex: _index,
                 list: list3,

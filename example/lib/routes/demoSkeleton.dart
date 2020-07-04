@@ -28,14 +28,14 @@ class _DemoSkeleton extends State<DemoSkeleton> {
             row: 3,
             title: true,
           ),
-          title("显示头像"),
+          title("Show avatar"),
           Skeleton(
             row: 3,
             title: true,
             avatar: true,
             avatarShape: "round",
           ),
-          title("显示子组件"),
+          title("Show subcomponents"),
           CupertinoSwitch(
             value: _loading,
             // activeColor: Colors.red, //选中时的颜色
@@ -54,13 +54,14 @@ class _DemoSkeleton extends State<DemoSkeleton> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text("关于 Vant",
+                Text("with respect to Vant",
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                 SizedBox(
                   height: 10,
                 ),
-                Text("Vant 是一套轻量、可靠的移动端 Vue 组件库，提供了丰富的基础组件和业务组件，帮助开发者快速搭建移动应用。",
+                Text(
+                    "Vant Is a set of lightweight and reliable mobile terminal Vue The component library provides a wealth of basic components and business components to help developers quickly build mobile applications.",
                     style: TextStyle(fontSize: 14, height: 1.5))
               ],
             ),

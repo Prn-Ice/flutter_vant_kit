@@ -24,18 +24,18 @@ class _DemoPrice extends State<DemoPrice> {
           Price(
             value: 1234.567,
           ),
-          title("保留三位小数"),
+          title("Keep three decimal places"),
           Price(
             value: 1234.567,
             decimal: 3,
           ),
-          title("自定义符号和颜色"),
+          title("Custom symbols and colors"),
           Price(
             currency: "\$",
             color: Colors.red,
             value: 1234.567,
           ),
-          title("按照千分号形式显示"),
+          title("Display as a thousand sign"),
           Price(
             thousands: true,
             value: 10010.01,

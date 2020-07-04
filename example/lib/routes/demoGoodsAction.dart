@@ -23,53 +23,60 @@ class _DemoGoodsAction extends State<DemoGoodsAction> {
           title("Basic usage"),
           GoodsAction(
             actions: [
-              ActionButtonItem(text: "客服", icon: Icons.chat_bubble_outline),
-              ActionButtonItem(text: "购物车", icon: Icons.add_shopping_cart),
-            ],
-            buttons: [
-              ButtonItem(
-                  text: "加入购物车",
-                  color: LinearGradient(
-                      colors: [Color(0xffffd01e), Color(0xffff8917)])),
-              ButtonItem(
-                  text: "立即购买",
-                  color: LinearGradient(
-                      colors: [Color(0xffff6034), Color(0xffee0a24)])),
-            ],
-          ),
-          title("徽标提示"),
-          GoodsAction(
-            actions: [
-              ActionButtonItem(text: "客服", icon: Icons.chat_bubble_outline),
               ActionButtonItem(
-                  text: "购物车", icon: Icons.add_shopping_cart, info: "5"),
-              ActionButtonItem(text: "店铺", icon: Icons.store, info: "12"),
+                  text: "Customer service", icon: Icons.chat_bubble_outline),
+              ActionButtonItem(
+                  text: "shopping cart", icon: Icons.add_shopping_cart),
             ],
             buttons: [
               ButtonItem(
-                  text: "加入购物车",
+                  text: "add to Cart",
                   color: LinearGradient(
                       colors: [Color(0xffffd01e), Color(0xffff8917)])),
               ButtonItem(
-                  text: "立即购买",
+                  text: "Buy now",
                   color: LinearGradient(
                       colors: [Color(0xffff6034), Color(0xffee0a24)])),
             ],
           ),
-          title("加载和禁止状态"),
+          title("Logo tips"),
           GoodsAction(
             actions: [
-              ActionButtonItem(text: "客服", icon: Icons.chat_bubble_outline),
-              ActionButtonItem(text: "购物车", icon: Icons.add_shopping_cart),
+              ActionButtonItem(
+                  text: "Customer service", icon: Icons.chat_bubble_outline),
+              ActionButtonItem(
+                  text: "shopping cart",
+                  icon: Icons.add_shopping_cart,
+                  info: "5"),
+              ActionButtonItem(text: "Shop", icon: Icons.store, info: "12"),
             ],
             buttons: [
               ButtonItem(
-                  text: "加入购物车",
+                  text: "add to Cart",
+                  color: LinearGradient(
+                      colors: [Color(0xffffd01e), Color(0xffff8917)])),
+              ButtonItem(
+                  text: "Buy now",
+                  color: LinearGradient(
+                      colors: [Color(0xffff6034), Color(0xffee0a24)])),
+            ],
+          ),
+          title("Loading and disabling status"),
+          GoodsAction(
+            actions: [
+              ActionButtonItem(
+                  text: "Customer service", icon: Icons.chat_bubble_outline),
+              ActionButtonItem(
+                  text: "shopping cart", icon: Icons.add_shopping_cart),
+            ],
+            buttons: [
+              ButtonItem(
+                  text: "add to Cart",
                   disabled: true,
                   color: LinearGradient(
                       colors: [Color(0xffffd01e), Color(0xffff8917)])),
               ButtonItem(
-                  text: "立即购买",
+                  text: "Buy now",
                   loading: true,
                   color: LinearGradient(
                       colors: [Color(0xffff6034), Color(0xffee0a24)])),
@@ -79,15 +86,16 @@ class _DemoGoodsAction extends State<DemoGoodsAction> {
           GoodsAction(
             actions: [
               ActionButtonItem(
-                  customText: Text("客服",
+                  customText: Text("Customer",
                       style: TextStyle(color: Colors.blueAccent, fontSize: 12)),
                   customIcon: Icon(Icons.chat_bubble_outline,
                       color: Colors.blueAccent, size: 16)),
-              ActionButtonItem(text: "购物车", icon: Icons.add_shopping_cart),
+              ActionButtonItem(
+                  text: "shopping cart", icon: Icons.add_shopping_cart),
             ],
             buttons: [
-              ButtonItem(text: "加入购物车", color: Color(0xffbe99ff)),
-              ButtonItem(text: "立即购买", color: Color(0xff7232dd)),
+              ButtonItem(text: "add to Cart", color: Color(0xffbe99ff)),
+              ButtonItem(text: "Buy now", color: Color(0xff7232dd)),
             ],
           ),
         ],
