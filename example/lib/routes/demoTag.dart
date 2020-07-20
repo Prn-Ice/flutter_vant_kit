@@ -26,10 +26,10 @@ class _DemoTag extends State<DemoTag> {
         Row(
           children: <Widget>[
             Tag(text: "Tag"),
-            Tag(type: "primary", text: "Tag"),
-            Tag(type: "success", text: "Tag"),
-            Tag(type: "danger", text: "Tag"),
-            Tag(type: "warning", text: "Tag"),
+            Tag(type: TagType.primary, text: "Tag"),
+            Tag(type: TagType.success, text: "Tag"),
+            Tag(type: TagType.danger, text: "Tag"),
+            Tag(type: TagType.warning, text: "Tag"),
           ],
         ),
         title("Rounded corner style"),
@@ -40,22 +40,22 @@ class _DemoTag extends State<DemoTag> {
               round: true,
             ),
             Tag(
-              type: "primary",
+              type: TagType.primary,
               text: "Tag",
               round: true,
             ),
             Tag(
-              type: "success",
+              type: TagType.success,
               text: "Tag",
               round: true,
             ),
             Tag(
-              type: "danger",
+              type: TagType.danger,
               text: "Tag",
               round: true,
             ),
             Tag(
-              type: "warning",
+              type: TagType.warning,
               text: "Tag",
               round: true,
             ),
@@ -69,22 +69,22 @@ class _DemoTag extends State<DemoTag> {
               mark: true,
             ),
             Tag(
-              type: "primary",
+              type: TagType.primary,
               text: "Tag",
               mark: true,
             ),
             Tag(
-              type: "success",
+              type: TagType.success,
               text: "Tag",
               mark: true,
             ),
             Tag(
-              type: "danger",
+              type: TagType.danger,
               text: "Tag",
               mark: true,
             ),
             Tag(
-              type: "warning",
+              type: TagType.warning,
               text: "Tag",
               mark: true,
             ),
@@ -98,22 +98,22 @@ class _DemoTag extends State<DemoTag> {
               plain: true,
             ),
             Tag(
-              type: "primary",
+              type: TagType.primary,
               text: "Tag",
               plain: true,
             ),
             Tag(
-              type: "success",
+              type: TagType.success,
               text: "Tag",
               plain: true,
             ),
             Tag(
-              type: "danger",
+              type: TagType.danger,
               text: "Tag",
               plain: true,
             ),
             Tag(
-              type: "warning",
+              type: TagType.warning,
               text: "Tag",
               plain: true,
             ),
@@ -131,17 +131,17 @@ class _DemoTag extends State<DemoTag> {
         Row(children: <Widget>[
           Tag(
             text: "Tag",
-            type: "success",
+            type: TagType.success,
           ),
           Tag(
             text: "Tag",
-            size: "medium",
-            type: "success",
+            size: TagSize.medium,
+            type: TagType.success,
           ),
           Tag(
             text: "Tag",
-            size: "large",
-            type: "success",
+            size: TagSize.large,
+            type: TagType.success,
           ),
         ]),
         title("Tag can be closed"),
@@ -153,7 +153,7 @@ class _DemoTag extends State<DemoTag> {
             },
           ),
           Tag(
-            type: "primary",
+            type: TagType.primary,
             text: "Tag",
             onClose: () async {
               Utils.toast("close");
@@ -162,7 +162,7 @@ class _DemoTag extends State<DemoTag> {
           Tag(
             plain: true,
             round: true,
-            type: "primary",
+            type: TagType.primary,
             text: "Tag",
             onClose: () async {
               Utils.toast("close");

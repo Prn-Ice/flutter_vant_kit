@@ -1,48 +1,62 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vant_kit/theme/style.dart';
 
+enum ButtonType {
+  normal,
+  primary,
+  info,
+  danger,
+  warning,
+}
+enum ButtonSize {
+  mini,
+  small,
+  normal,
+  large,
+}
+
 class NButton extends StatelessWidget {
-  // 类型
-  final String type;
-  // 尺寸
-  final String size;
-  // 按钮文字
+  // type
+  final ButtonType type;
+  // size
+  final ButtonSize size;
+  // buttonText
   final String text;
-  // 按钮宽度
+  // button width
   final double width;
-  // 按钮高度
+  // Button height
   final double height;
-  // 按钮颜色
+  // Button color
   final dynamic color;
-  // 左侧图标
+  // Left icon
   final Widget icon;
-  // 按钮内文字颜色
+  // button text color
   final Color textColor;
-  // 是否为块级元素
+  // Whether it is a block-level element
   final bool block;
-  // 是否为朴素按钮
+  // Whether it is a plain button
   final bool plain;
-  // 是否为方形按钮
+  // Whether it is a square button
   final bool square;
-  // 是否为圆形按钮
+  // Whether it is a round button
   final bool round;
-  // 是否禁用按钮
+  // Whether to disable the button
   final bool disabled;
-  // 是否为加载中
+  // Is it loading
   final bool loading;
-  // 是否使用 0.5px 边框
+  // use or not 0.5px 边框
   final bool hairline;
-  // 自定义内边距
+  // Custom padding
   final EdgeInsets padding;
-  // 自定义按钮圆角
+  // Custom button rounded corners
   final BorderRadius borderRadius;
-  // 点击后回调
+  // Callback after clicking
   final Function() onClick;
 
   NButton(
       {Key key,
-      this.type: "default",
-      this.size: "normal",
+      this.type: ButtonType.normal,
+      this.size: ButtonSize.normal,
       this.text,
       this.width,
       this.height,
@@ -59,59 +73,56 @@ class NButton extends StatelessWidget {
       this.padding,
       this.borderRadius,
       this.onClick})
-      : assert(["mini", "small", "normal", "large"].indexOf(size) > -1,
-            "size must be mini, small, normal, or large"),
-        assert(
-            ["default", "primary", "info", "danger", "warning"].indexOf(type) >
-                -1,
+      : assert(size != null, "size must be mini, small, normal, or large"),
+        assert(type != null,
             "type must be default, primary, info, danger or warning"),
         super(key: key);
 
-  final Map<String, dynamic> sizes = {
-    "mini": <String, dynamic>{
+  final Map<ButtonSize, dynamic> sizes = {
+    ButtonSize.mini: <String, dynamic>{
       "fontSize": Style.buttonMiniFontSize,
       "padding": EdgeInsets.symmetric(horizontal: 2),
       "height": Style.buttonMiniHeight
     },
-    "small": <String, dynamic>{
+    ButtonSize.small: <String, dynamic>{
       "fontSize": Style.buttonSmallFontSize,
       "padding": EdgeInsets.symmetric(horizontal: 8),
       "height": Style.buttonSmallHeight
     },
-    "normal": <String, dynamic>{
+    ButtonSize.normal: <String, dynamic>{
       "fontSize": Style.buttonDefaultFontSize,
       "padding": EdgeInsets.symmetric(horizontal: 15),
       "height": Style.buttonDefaultHeight
     },
-    "large": <String, dynamic>{
+    ButtonSize.large: <String, dynamic>{
       "fontSize": Style.buttonLargeFontSize,
       "padding": EdgeInsets.symmetric(horizontal: 24),
       "height": Style.buttonLargeHeight
     },
   };
 
-  final Map<String, dynamic> colors = {
-    "default": <String, Color>{
+  final Map<ButtonType, dynamic> colors = {
+    ButtonType.normal: <String, Color>{
       "buttonColor": Style.buttonDefaultBackgroundColor,
       "borderColor": Style.buttonDefaultBorderColor,
       "textColor": Style.buttonDefaultColor
     },
-    "primary": <String, Color>{
+    ButtonType.primary: <String, Color>{
       "buttonColor": Style.buttonPrimaryBackgroundColor,
       "borderColor": Style.buttonPrimaryBorderColor,
       "textColor": Style.buttonPrimaryColor
     },
-    "info": <String, Color>{
+    ButtonType.info: <String, Color>{
       "buttonColor": Style.buttonInfoBackgroundColor,
       "borderColor": Style.buttonInfoBorderColor,
       "textColor": Style.buttonInfoColor
     },
-    "danger": <String, Color>{
+    ButtonType.danger: <String, Color>{
       "buttonColor": Style.buttonDangerBackgroundColor,
       "borderColor": Style.buttonDangerBorderColor,
       "textColor": Style.buttonDangerColor
     },
-    "warning": <String, Color>{
+    ButtonType.warning: <String, Color>{
       "buttonColor": Style.buttonWarningBackgroundColor,
       "borderColor": Style.buttonWarningBorderColor,
       "textColor": Style.buttonWarningColor
@@ -128,7 +139,7 @@ class NButton extends StatelessWidget {
     Color buttonTextColor = (textColor ??
         (plain
             ? (color ?? colors[type]["buttonColor"])
-            : ((color != null) && type == 'default'
+            : ((color != null) && type == ButtonType.normal
                 ? Colors.white
                 : colors[type]["textColor"])));
 

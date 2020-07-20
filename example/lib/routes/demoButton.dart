@@ -42,22 +42,22 @@ class _DemoButton extends State<DemoButton> {
                 ),
                 NButton(
                   text: "Main button",
-                  type: "primary",
+                  type: ButtonType.primary,
                   onClick: () {},
                 ),
                 NButton(
                   text: "Information button",
-                  type: "info",
+                  type: ButtonType.info,
                   onClick: () {},
                 ),
                 NButton(
                   text: "Danger button",
-                  type: "danger",
+                  type: ButtonType.danger,
                   onClick: () {},
                 ),
                 NButton(
                   text: "Warning button",
-                  type: "warning",
+                  type: ButtonType.warning,
                   onClick: () {},
                 ),
               ],
@@ -69,13 +69,13 @@ class _DemoButton extends State<DemoButton> {
                 NButton(
                   plain: true,
                   text: "Naive button",
-                  type: "primary",
+                  type: ButtonType.primary,
                   onClick: () {},
                 ),
                 NButton(
                   plain: true,
                   text: "Naive button",
-                  type: "info",
+                  type: ButtonType.info,
                   onClick: () {},
                 )
               ],
@@ -88,14 +88,14 @@ class _DemoButton extends State<DemoButton> {
                   plain: true,
                   hairline: true,
                   text: "Thin border button",
-                  type: "primary",
+                  type: ButtonType.primary,
                   onClick: () {},
                 ),
                 NButton(
                   plain: true,
                   hairline: true,
                   text: "Thin border button",
-                  type: "info",
+                  type: ButtonType.info,
                   onClick: () {},
                 )
               ],
@@ -112,13 +112,13 @@ class _DemoButton extends State<DemoButton> {
                 NButton(
                   disabled: true,
                   text: "Disabled",
-                  type: "primary",
+                  type: ButtonType.primary,
                 ),
                 NButton(
                   plain: true,
                   disabled: true,
                   text: "Disabled",
-                  type: "info",
+                  type: ButtonType.info,
                 )
               ],
             ),
@@ -129,18 +129,18 @@ class _DemoButton extends State<DemoButton> {
               children: <Widget>[
                 NButton(
                   loading: true,
-                  type: "primary",
+                  type: ButtonType.primary,
                 ),
                 NButton(
                   loading: true,
                   text: "Loading...",
-                  type: "primary",
+                  type: ButtonType.primary,
                 ),
                 NButton(
                   plain: true,
                   loading: _loading,
                   text: "Recover after clicking 2 S",
-                  type: "info",
+                  type: ButtonType.info,
                   onClick: () {
                     setState(() {
                       _loading = true;
@@ -167,27 +167,27 @@ class _DemoButton extends State<DemoButton> {
               children: <Widget>[
                 NButton(
                   text: "Square button",
-                  type: "primary",
+                  type: ButtonType.primary,
                   square: true,
                   onClick: () {},
                 ),
                 NButton(
                   text: "Round button",
-                  type: "info",
+                  type: ButtonType.info,
                   round: true,
                   onClick: () {},
                 ),
                 NButton(
                   plain: true,
                   text: "Round button",
-                  type: "primary",
+                  type: ButtonType.primary,
                   round: true,
                   onClick: () {},
                 ),
                 NButton(
                   block: true,
                   text: "Block level buttons",
-                  type: "info",
+                  type: ButtonType.info,
                   onClick: () {},
                 )
               ],
@@ -199,13 +199,13 @@ class _DemoButton extends State<DemoButton> {
               children: <Widget>[
                 NButton(
                   icon: Icon(Icons.star_border, color: Colors.white, size: 18),
-                  type: "primary",
+                  type: ButtonType.primary,
                   onClick: () {},
                 ),
                 NButton(
                   text: "push button",
                   icon: Icon(Icons.star_border, color: Colors.white, size: 18),
-                  type: "primary",
+                  type: ButtonType.primary,
                   onClick: () {},
                 ),
                 NButton(
@@ -215,7 +215,7 @@ class _DemoButton extends State<DemoButton> {
                     width: 18,
                     child: Image.network("https://img.yzcdn.cn/vant/logo.png"),
                   ),
-                  type: "primary",
+                  type: ButtonType.primary,
                   onClick: () {},
                 )
               ],
@@ -227,26 +227,26 @@ class _DemoButton extends State<DemoButton> {
               crossAxisAlignment: WrapCrossAlignment.center,
               children: <Widget>[
                 NButton(
-                  type: "primary",
-                  size: "large",
+                  type: ButtonType.primary,
+                  size: ButtonSize.large,
                   text: "Large button",
                   onClick: () {},
                 ),
                 NButton(
-                  type: "primary",
-                  size: "normal",
+                  type: ButtonType.primary,
+                  size: ButtonSize.normal,
                   text: "Normal button",
                   onClick: () {},
                 ),
                 NButton(
-                  type: "primary",
-                  size: "small",
+                  type: ButtonType.primary,
+                  size: ButtonSize.small,
                   text: "Small button",
                   onClick: () {},
                 ),
                 NButton(
-                  type: "primary",
-                  size: "mini",
+                  type: ButtonType.primary,
+                  size: ButtonSize.mini,
                   text: "Mini button",
                   onClick: () {},
                 ),

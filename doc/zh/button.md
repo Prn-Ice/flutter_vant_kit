@@ -7,7 +7,7 @@ import 'package:flutter_vant_kit/main.dart';
 
 NButton(
   text: "按钮",
-  type: "primary",
+  type: ButtonType.primary,
   ...
 ),
 ```

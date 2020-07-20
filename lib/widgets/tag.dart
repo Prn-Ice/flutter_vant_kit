@@ -1,30 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vant_kit/theme/style.dart';
 
+enum TagSize { normal, medium, large }
+
+enum TagType { normal, primary, success, danger, warning }
+
 class Tag extends StatefulWidget {
-  // 大小
-  final String type;
-  // 大小
-  final String size;
-  // Tag内文字
+  // size
+  final TagType type;
+  // size
+  final TagSize size;
+  // Text in Tag
   final String text;
-  // 是否为空心样式
+  // Whether it is a hollow style
   final bool plain;
-  // 是否为圆角样式
+  // Whether it is rounded
   final bool round;
-  // 是否为标记样式
+  // Whether it is a mark style
   final bool mark;
-  // Tag颜色
+  // Tag color
   final Color color;
-  // 文字颜色，优先于color属性
+  // Text color, priority over color attribute
   final Color textColor;
-  // 是否为可关闭Tag
+  // Whether the tag can be closed
   final Function() onClose;
 
   Tag({
     Key key,
-    this.type: "default",
-    this.size: "default",
+    this.type: TagType.normal,
+    this.size: TagSize.normal,
     this.text: "",
     this.plain: false,
     this.round: false,
@@ -32,12 +36,8 @@ class Tag extends StatefulWidget {
     this.color,
     this.textColor,
     this.onClose,
-  })  : assert(["default", "medium", "large"].indexOf(size) > -1,
-            "size must be default, medium, or large"),
-        assert(
-            ["default", "primary", "success", "danger", "warning"]
-                    .indexOf(type) >
-                -1,
+  })  : assert(size != null, "size must be default, medium, or large"),
+        assert(type != null,
             "type must be default, primary, success, danger or warning"),
         super(key: key);
 
@@ -48,18 +48,18 @@ class Tag extends StatefulWidget {
 class _Tag extends State<Tag> {
   bool isShow = true;
 
-  Map<String, dynamic> sizes = {
-    "default": <String, double>{"fontSize": Style.tagFontSize},
-    "medium": <String, double>{"fontSize": Style.tagMediumFontSize},
-    "large": <String, double>{"fontSize": Style.tagLargeFontSize}
+  Map<TagSize, dynamic> sizes = {
+    TagSize.normal: <String, double>{"fontSize": Style.tagFontSize},
+    TagSize.medium: <String, double>{"fontSize": Style.tagMediumFontSize},
+    TagSize.large: <String, double>{"fontSize": Style.tagLargeFontSize}
   };
 
-  Map<String, dynamic> colors = {
-    "default": <String, Color>{"color": Style.tagDefaultColor},
-    "danger": <String, Color>{"color": Style.tagDangerColor},
-    "primary": <String, Color>{"color": Style.tagPrimaryColor},
-    "success": <String, Color>{"color": Style.tagSuccessColor},
-    "warning": <String, Color>{"color": Style.tagWarningColor},
+  Map<TagType, dynamic> colors = {
+    TagType.normal: <String, Color>{"color": Style.tagDefaultColor},
+    TagType.danger: <String, Color>{"color": Style.tagDangerColor},
+    TagType.primary: <String, Color>{"color": Style.tagPrimaryColor},
+    TagType.success: <String, Color>{"color": Style.tagSuccessColor},
+    TagType.warning: <String, Color>{"color": Style.tagWarningColor},
   };
 
   void close() {

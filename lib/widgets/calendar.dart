@@ -470,7 +470,7 @@ class _CalendarState extends State<CalendarState> {
         child: NButton(
           height: Style.calendarConfirmButtonHeight,
           block: true,
-          type: "info",
+          type: ButtonType.info,
           color: _calendar.color,
           text: _calendar.confirmText,
           round: true,

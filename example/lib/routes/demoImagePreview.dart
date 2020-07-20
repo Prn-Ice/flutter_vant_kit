@@ -32,7 +32,7 @@ class _DemoImagePreview extends State<DemoImagePreview> {
           title("Basic usage"),
           NButton(
             text: "preview picture",
-            type: "primary",
+            type: ButtonType.primary,
             onClick: () {
               showDialog(
                   context: context,
@@ -47,7 +47,7 @@ class _DemoImagePreview extends State<DemoImagePreview> {
           title("Specify initial position"),
           NButton(
             text: "Specify initial position",
-            type: "primary",
+            type: ButtonType.primary,
             onClick: () {
               showDialog(
                   context: context,

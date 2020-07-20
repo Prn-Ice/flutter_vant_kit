@@ -123,7 +123,7 @@ class _DemoDialog extends State<DemoDialog> {
             children: <Widget>[
               NButton(
                 text: "Prompt popup",
-                type: "primary",
+                type: ButtonType.primary,
                 onClick: () {
                   _showDialog1(context);
                 },
@@ -131,7 +131,7 @@ class _DemoDialog extends State<DemoDialog> {
               SizedBox(width: 10),
               NButton(
                 text: "Prompt popup (untitled)",
-                type: "primary",
+                type: ButtonType.primary,
                 onClick: () {
                   _showDialog2(context);
                 },
@@ -143,7 +143,7 @@ class _DemoDialog extends State<DemoDialog> {
             children: <Widget>[
               NButton(
                 text: "Confirm popup",
-                type: "primary",
+                type: ButtonType.primary,
                 onClick: () {
                   _showDialog3(context);
                 },
@@ -151,7 +151,7 @@ class _DemoDialog extends State<DemoDialog> {
               SizedBox(width: 10),
               NButton(
                 text: "Custom confirmation",
-                type: "primary",
+                type: ButtonType.primary,
                 onClick: () {
                   _showDialog4(context);
                 },
@@ -163,7 +163,7 @@ class _DemoDialog extends State<DemoDialog> {
             children: <Widget>[
               NButton(
                 text: "Asynchronous call",
-                type: "primary",
+                type: ButtonType.primary,
                 onClick: () {
                   _showDialog5(context);
                 },
@@ -175,7 +175,7 @@ class _DemoDialog extends State<DemoDialog> {
             children: <Widget>[
               NButton(
                 text: "Custom content",
-                type: "primary",
+                type: ButtonType.primary,
                 onClick: () {
                   _showDialog6(context);
                 },

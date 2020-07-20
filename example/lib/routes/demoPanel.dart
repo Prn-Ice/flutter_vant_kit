@@ -43,15 +43,15 @@ class _DemoPanel extends State<DemoPanel> {
                 children: <Widget>[
                   NButton(
                     padding: EdgeInsets.symmetric(vertical: 6, horizontal: 12),
-                    type: "danger",
-                    size: "small",
+                    type: ButtonType.danger,
+                    size: ButtonSize.small,
                     text: "Certain",
                     onClick: () => {},
                   ),
                   SizedBox(width: 8),
                   NButton(
                     padding: EdgeInsets.symmetric(vertical: 6, horizontal: 12),
-                    size: "small",
+                    size: ButtonSize.small,
                     text: "Cancel",
                     onClick: () => {},
                   ),

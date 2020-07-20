@@ -25,7 +25,7 @@ class _DemoNumberKeyboard extends State<DemoNumberKeyboard> {
         title("Basic usage"),
         NButton(
           text: "The default keyboard pops up",
-          type: "primary",
+          type: ButtonType.primary,
           onClick: () {
             NumberKeyboard(
               title: "Default keyboard",

@@ -33,7 +33,7 @@ class _DemoCircle extends State<DemoCircle> {
             children: <Widget>[
               NButton(
                 text: "Increase",
-                type: "primary",
+                type: ButtonType.primary,
                 onClick: () {
                   setState(() {
                     percentage += 10;
@@ -43,7 +43,7 @@ class _DemoCircle extends State<DemoCircle> {
               SizedBox(width: 6),
               NButton(
                 text: "Decrease",
-                type: "danger",
+                type: ButtonType.danger,
                 onClick: () {
                   setState(() {
                     percentage -= 10;

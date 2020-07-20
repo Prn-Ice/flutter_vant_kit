@@ -133,8 +133,8 @@ class _DemoField extends State<DemoField> {
                 controller: testInput7,
                 right: NButton(
                   text: "Send the verification code",
-                  type: "primary",
-                  size: "small",
+                  type: ButtonType.primary,
+                  size: ButtonSize.small,
                   onClick: () {},
                 ),
               ),

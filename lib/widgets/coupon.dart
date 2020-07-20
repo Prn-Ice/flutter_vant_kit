@@ -146,8 +146,8 @@ class _CouponState extends State<CouponState>
       },
       right: NButton(
         text: couponWidget.exchangeButtonText,
-        size: "small",
-        type: "info",
+        size: ButtonSize.small,
+        type: ButtonType.info,
         disabled: couponWidget.exchangeButtonDisabled || searchInput.text == '',
         width: Style.couponListExchangeButtonWidth,
         onClick: () {

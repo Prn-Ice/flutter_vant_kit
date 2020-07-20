@@ -220,7 +220,7 @@ class _AddressEdit extends State<AddressEdit> {
       text: widget.saveButtonText,
       round: true,
       block: true,
-      type: "danger",
+      type: ButtonType.danger,
       onClick: () {
         if (widget.onSave != null) widget.onSave(getContent());
       },

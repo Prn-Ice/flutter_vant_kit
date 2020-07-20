@@ -36,7 +36,7 @@ class _DemoSteps extends State<DemoSteps> {
                 children: <Widget>[
                   NButton(
                     text: "Previous",
-                    type: "primary",
+                    type: ButtonType.primary,
                     plain: true,
                     onClick: () {
                       setState(() {
@@ -48,7 +48,7 @@ class _DemoSteps extends State<DemoSteps> {
                   SizedBox(width: 6),
                   NButton(
                     text: "Next step",
-                    type: "primary",
+                    type: ButtonType.primary,
                     plain: true,
                     onClick: () {
                       setState(() {

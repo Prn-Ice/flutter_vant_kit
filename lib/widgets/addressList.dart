@@ -97,7 +97,7 @@ class _AddressList extends State<AddressList> {
                           ? Tag(
                               text: "${widget.defaultTagText}",
                               round: true,
-                              type: "danger")
+                              type: TagType.danger)
                           : Container()
                     ],
                   ),
@@ -185,7 +185,7 @@ class _AddressList extends State<AddressList> {
         child: NButton(
           text: "新增地址",
           block: true,
-          type: "danger",
+          type: ButtonType.danger,
           round: true,
           onClick: () {
             if (widget.onAdd != null) widget.onAdd();

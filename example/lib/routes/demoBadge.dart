@@ -17,7 +17,7 @@ class _DemoBadge extends State<DemoBadge> {
   Widget testButton() {
     return NButton(
       text: "push button",
-      type: "primary",
+      type: ButtonType.primary,
       onClick: () {},
     );
   }

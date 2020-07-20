@@ -67,14 +67,14 @@ class _DemoCard extends State<DemoCard> {
                   NButton(
                     text: "push button",
                     round: true,
-                    size: "mini",
+                    size: ButtonSize.mini,
                     padding: EdgeInsets.symmetric(vertical: 3, horizontal: 12),
                   ),
                   SizedBox(width: 6),
                   NButton(
                     text: "push button",
                     round: true,
-                    size: "mini",
+                    size: ButtonSize.mini,
                     padding: EdgeInsets.symmetric(vertical: 3, horizontal: 12),
                   ),
                 ],

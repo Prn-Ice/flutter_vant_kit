@@ -50,7 +50,7 @@ class _DemoLoading extends State<DemoLoading> {
           title("Display Loading"),
           NButton(
             text: "Show loading",
-            type: "primary",
+            type: ButtonType.primary,
             onClick: () {
               showDialog(
                   context: context,

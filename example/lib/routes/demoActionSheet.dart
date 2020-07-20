@@ -37,7 +37,7 @@ class _DemoActionSheet extends State<DemoActionSheet> {
           title("Basic usage"),
           NButton(
             text: "Popup menu",
-            type: "primary",
+            type: ButtonType.primary,
             onClick: () {
               ActionSheet(
                   actions: actionList,
@@ -49,7 +49,7 @@ class _DemoActionSheet extends State<DemoActionSheet> {
           title("Option status"),
           NButton(
             text: "Popup menu",
-            type: "primary",
+            type: ButtonType.primary,
             onClick: () {
               ActionSheet(actions: actionList2).show(context);
             },
@@ -57,7 +57,7 @@ class _DemoActionSheet extends State<DemoActionSheet> {
           title("Show cancel button"),
           NButton(
             text: "Popup menu",
-            type: "primary",
+            type: ButtonType.primary,
             onClick: () {
               ActionSheet(
                 actions: actionList,
@@ -71,7 +71,7 @@ class _DemoActionSheet extends State<DemoActionSheet> {
           title("Display descriptive information"),
           NButton(
             text: "Popup menu",
-            type: "primary",
+            type: ButtonType.primary,
             onClick: () {
               ActionSheet(
                 actions: actionList,
@@ -83,7 +83,7 @@ class _DemoActionSheet extends State<DemoActionSheet> {
           title("Show title bar"),
           NButton(
             text: "Popup menu",
-            type: "primary",
+            type: ButtonType.primary,
             onClick: () {
               ActionSheet(
                 child: Container(

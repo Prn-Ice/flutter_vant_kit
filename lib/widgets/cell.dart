@@ -1,32 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vant_kit/theme/style.dart';
 
+enum CellSize { normal, large }
+
 class Cell extends StatelessWidget {
-  // 左侧标题
+  // Left heading
   final String title;
-  // 标题下方的描述信息
+  // Descriptive information below the title
   final String label;
-  // 单元格大小
-  final String size;
-  // 右侧内容
+  // Cell size
+  final CellSize size;
+  // Content on the right
   final String value;
-  // 左侧图标
+  // Left icon
   final IconData icon;
-  // 是否显示表单必填星号
+  // Whether to display the form must be filled with asterisks
   final bool require;
-  // 是否可点击
+  // Clickable
   final bool clickable;
-  // 是否展示右侧箭头并开启点击反馈
+  // Whether to show the right arrow and enable click feedback
   final bool isLink;
-  // 箭头方向
+  // Arrow direction
   final String arrowDirection;
-  // 自定义标题内容
+  // Custom header content
   final Widget customTitle;
-  // 自定义标题下方描述
+  // Description below custom title
   final Widget customLabel;
-  // 自定义右侧内容
+  // Customize the content on the right
   final Widget customRight;
-  // 点击单元格时触发
+  // Triggered when a cell is clicked
   final Function() onClick;
 
   Cell({
@@ -35,7 +37,7 @@ class Cell extends StatelessWidget {
     this.label,
     this.title,
     this.icon,
-    this.size: "normal",
+    this.size: CellSize.normal,
     this.require: false,
     this.clickable: false,
     this.isLink: false,
@@ -44,8 +46,7 @@ class Cell extends StatelessWidget {
     this.customTitle,
     this.customLabel,
     this.customRight,
-  })  : assert(size == "normal" || size == "large",
-            "size must be normal or large"),
+  })  : assert(size != null, "size must be normal or large"),
         assert(["left", "right", "up", "down"].indexOf(arrowDirection) > -1,
             "arrowDirection must be left, right, up or down"),
         super(key: key);
@@ -66,13 +67,13 @@ class Cell extends StatelessWidget {
     }
   }
 
-  final Map<String, dynamic> sizes = {
-    "normal": <String, dynamic>{
+  final Map<CellSize, dynamic> sizes = {
+    CellSize.normal: <String, dynamic>{
       "verticalPadding": Style.cellVerticalPadding,
       "titleFontSize": Style.cellFontSize,
       "labelFontSize": Style.cellLabelFontSize,
     },
-    "large": <String, dynamic>{
+    CellSize.large: <String, dynamic>{
       "verticalPadding": Style.cellLargeVerticalPadding,
       "titleFontSize": Style.cellLargeTitleFontSize,
       "labelFontSize": Style.cellLargeLabelFontSize,

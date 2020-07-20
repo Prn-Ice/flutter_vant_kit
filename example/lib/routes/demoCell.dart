@@ -33,11 +33,11 @@ class _DemoCell extends State<DemoCell> {
           ]),
           title("Cell size"),
           CellGroup(children: <Widget>[
-            Cell(title: "Cell", value: "contents", size: "large"),
+            Cell(title: "Cell", value: "contents", size: CellSize.large),
             Cell(
                 title: "Cell",
                 value: "contents",
-                size: "large",
+                size: CellSize.large,
                 label: "Description"),
           ]),
           title("Display icon"),
