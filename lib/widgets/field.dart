@@ -68,7 +68,7 @@ class Field extends StatefulWidget {
   // 文本样式
   final TextStyle style;
 
-  Field({
+  const Field({
     Key key,
     this.keyboardType,
     this.focusNode,
@@ -111,19 +111,22 @@ class Field extends StatefulWidget {
 class _Field extends State<Field> {
   bool _isShowPwd = false;
   bool _isShowDelete;
+  TextEditingController _controller;
 
   @override
   void initState() {
     super.initState();
 
+    _controller = widget.controller ?? TextEditingController();
+
     /// 获取初始化值
-    _isShowDelete = widget.controller.text.isNotEmpty;
+    _isShowDelete = _controller?.text?.isNotEmpty;
 
     /// 监听输入改变
-    widget.controller.addListener(() {
+    _controller?.addListener(() {
       if (mounted) {
         setState(() {
-          _isShowDelete = widget.controller.text.isNotEmpty;
+          _isShowDelete = _controller?.text?.isNotEmpty;
         });
       }
     });
@@ -164,7 +167,7 @@ class _Field extends State<Field> {
   Widget buildTextField() {
     return Expanded(
         child: TextFormField(
-            controller: widget.controller,
+            controller: _controller,
             focusNode: widget.focusNode,
             keyboardType: widget.keyboardType,
             textInputAction: widget.textInputAction,
@@ -246,7 +249,7 @@ class _Field extends State<Field> {
                       size: Style.fieldClearIconSize,
                       color: Style.fieldClearIconColor),
                   onTap: () {
-                    widget.controller.text = '';
+                    _controller.text = '';
                     if (widget.onChange != null) widget.onChange("");
                   },
                 )
